@@ -49,9 +49,9 @@ function ParallaxText({ children, baseVelocity = 100 }) {
     <div className="parallax">
       <motion.div className="scroller" style={{ x }}>
         {loopedBrandimg.map((array, index) => (
-          <div key={index} className="grid place-items-center min-w-[10rem] w-[1rem] md:w-[40vmin] max-w-[30rem]">
-            <Image src={array.image} alt={array.image} height={150} width={150} className="w-[100px] h-[80px] aspect-3/2" />
-          </div>
+          <motion.div key={index} className="grid place-items-center min-w-[10rem] w-[1rem] md:w-[40vmin] max-w-[30rem]">
+            <Image src={array.image} alt={array.image} height={120} width={120} className="w-[120px] h-[120px] object-contain" />
+          </motion.div>
         ))}
       </motion.div>
     </div>

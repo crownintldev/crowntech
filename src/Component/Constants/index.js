@@ -8,7 +8,7 @@ import slack from "../../../public/assets/images/slack.svg";
 import web from "../../../public/assets/images/web.jpg";
 import smm from "../../../public/assets/images/smm.jpg";
 import dmm from "../../../public/assets/images/dmm.jpg";
-import ceo from "../../../public/assets/images/ceo.jpeg";
+import ceo from "../../../public/assets/images/ceo.jpg";
 import md from "../../../public/assets/images/md.jpeg";
 import pr from "../../../public/assets/images/pr.jpeg";
 import cto from "../../../public/assets/images/cto.jpeg";

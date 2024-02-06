@@ -1,39 +1,26 @@
 import React from "react";
 import { motion } from "framer-motion";
-import techarrow from "../../../public/assets/images/techarrow.svg";
-import techcircle from "../../../public/assets/images/techcircle.svg";
-import techleft from "../../../public/assets/images/techleft.svg";
-import techright from "../../../public/assets/images/techright.svg";
-import techname from "../../../public/assets/images/techname.svg";
+import leftlogo from "../../../public/assets/images/logoleft.svg";
+import logodot from "../../../public/assets/images/logodot.svg";
+import logoright from "../../../public/assets/images/logoright.svg";
 import Image from "next/image";
 
 const firstImageVariants = {
-  initial: { y: "-100vw", opacity: 0 },
-  animate: { y: 0, opacity: 1 },
+  initial: { x: "-100vw", opacity: 0 },
+   animate: { x: 0, opacity: 1 },
   exit: { opacity: 0, transition: { duration: .6 } },
 };
 
 const secondImageVariants = {
   initial: { opacity: 0 },
-  animate: { opacity: 1 },
-  exit: { opacity: 0, transition: { duration: .7 } },
-};
-
-const thirdImageVariants = {
-    initial: { opacity: 0 },
     animate: { opacity: 1 },
     exit: { opacity: 0, transition: { duration: .9 } },
 };
 
-const fourthImageVariants = {
-    initial: { opacity: 0 },
-    animate: { opacity: 1 },
-    exit: { opacity: 0, transition: { duration: 1.2 } },
-};
-const fifthImageVariants = {
-  initial: { opacity: 0 },
-  animate: { opacity: 1 },
-  exit: { opacity: 0, transition: { duration: 1.1 } },
+const thirdImageVariants = {
+  initial: { x: "100vw", opacity: 0 },
+  animate: { x: 0, opacity: 1 },
+ exit: { opacity: 0, transition: { duration: .6 } },
 };
 
 const transition = {
@@ -41,21 +28,23 @@ const transition = {
   ease: "easeInOut",
 };
 const Preloader = () => (
-  <motion.div className="preloader bg-white  " style={{ position: "relative" }}>
+  
+  <motion.div className="preloader bg-white " style={{ position: "relative" }}>
+
     <motion.div
       variants={firstImageVariants}
       initial="initial"
       animate="animate"
       exit="exit"
-      transition={{ ...transition, delay: 0 }}
+      transition={{ ...transition, delay: .5 }}
       style={{ position: "absolute", zIndex: 5 }}
     >
       <Image
-        src={techarrow}
-        alt="Bird Image"
+        src={leftlogo}
+        alt="left logo"
         width={200}
         height={200}
-        className="image w-40 h-40 mb-24 ml-2 "
+        className="image w-96 h-96  "
       />
     </motion.div>
     <motion.div
@@ -63,16 +52,16 @@ const Preloader = () => (
       initial="initial"
       animate="animate"
       exit="exit"
-      transition={{ duration: 1, delay: 1 }}
+      transition={{ duration: 1, delay: .9 }}
       style={{ position: "absolute", zIndex: 2 }}
     >
       <Image
-        src={techcircle}
+        src={logodot}
         loading="lazy"
-        alt="Circle Image"
+        alt="logodot"
         width={200}
         height={200}
-        className="image w-80 h-80"
+        className="image w-96 h-96 mb-2"
       />
     </motion.div>
     <motion.div
@@ -80,64 +69,18 @@ const Preloader = () => (
       initial="initial"
       animate="animate"
       exit="exit"
-      transition={{ ...transition, delay: 1.3 }}
+      transition={{ ...transition, delay: .5 }}
       style={{ position: "absolute", zIndex: 3 }}
     >
       <Image
-        src={techright}
-        alt="Third Image"
+        src={logoright}
+        alt="logo right"
         width={200}
         height={200}
-        className="image ml-3 w-72 h-72 mb-2"
+        className="image ml-3 w-96 h-96 mb-2"
       />
     </motion.div>
 
-    <motion.div
-      variants={fourthImageVariants}
-      initial="initial"
-      animate="animate"
-      exit="exit"
-      transition={{ ...transition, delay: 1.5 }}
-      style={{ position: "absolute", zIndex: 4 }}
-    >
-      <Image
-        src={techleft}
-        alt="Fourth Image"
-        width={200}
-        height={200}
-        className="image w-40 h-40  mb-[3.8rem] mr-[6.5rem]"
-      />
-
-    </motion.div>
-    <motion.div
-      variants={fifthImageVariants}
-      initial="initial"
-      animate="animate"
-      exit="exit"
-      transition={{ ...transition, delay: 1.5 }}
-      style={{ position: "absolute", zIndex: 4 }}
-    >
-      <Image
-        src={techname}
-        alt="Fourth Image"
-        width={200}
-        height={200}
-        className="image  mb-80"
-      />
-
-    </motion.div>
-    <motion.div
-      variants={fifthImageVariants}
-      initial="initial"
-      animate="animate"
-      exit="exit"
-      transition={{ ...transition, delay: 0.3 }}
-      style={{ position: "absolute", zIndex: 1 }}
-      className="image w-80 h-80   rounded-full bg-white"
-    >
-     
-
-    </motion.div>
   </motion.div> 
 );
 

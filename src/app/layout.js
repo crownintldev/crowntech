@@ -2,8 +2,11 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { ContextProvider } from "@/Component/ContextProvider";
 import ServiceContext from "@/Component/ServiceContext";
-import { SpeedInsights } from "@vercel/speed-insights/next"
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import PrelineScript from "@/Component/PrelineScript";
+import logo from "../../public/assets/images/logo.svg";
+import Image from "next/image";
+import Head from "next/head";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -15,15 +18,18 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" href="/assets/images/logo.svg" />
+      </head>
+
       <body className={inter.className}>
-          
-          <ContextProvider>
-            <ServiceContext>
+        <ContextProvider>
+          <ServiceContext>
             {children}
             <PrelineScript />
             <SpeedInsights />
-            </ServiceContext>
-            </ContextProvider>
+          </ServiceContext>
+        </ContextProvider>
       </body>
     </html>
   );

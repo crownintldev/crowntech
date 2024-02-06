@@ -128,9 +128,9 @@ module.exports = {
         primary:{
           blue100:"#3335D7",
           blue200:"#2727B9",
-          blue300:"#171878",
-          blue400:"#121468",
-          blue500:"#0A0B35",
+          blue300:"#0056ee",
+          blue400:"#0042d3",
+          blue500:"#001596",
           light:"#fcfffd",
           white:"#ffffff",
           black:"#000000",

@@ -1,12 +1,13 @@
 import Link from 'next/link';
 import React from 'react';
-import { HeadingH1, HeadingH2, HeadingH3, HeadingH4 } from '../Heading';
+import logo from "../../../public/assets/images/logo.svg";
+import Image from "next/image";
 
 const Logo = ({ className }) => {
   return (
     <Link  href="/">
-      <HeadingH3 className={`text-white dark:text-black`} title={'LOGO'}/>
-      {/* <Image className='w-[100px] sm:w-[150px]' src={logo} /> */}
+      {/* <HeadingH3 className={`text-white dark:text-black`} title={'LOGO'}/> */}
+      <Image height={150} width={150} className='w-16 h-16' src={logo} />
     </Link>
   );
 };

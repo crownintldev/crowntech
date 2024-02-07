@@ -47,10 +47,10 @@ const SignUpForm = () => {
         onClick={togglePasswordVisibility}
         checked={showPassword} />}
         />
-       <div class="flex items-center">
-        <input type="checkbox" id="customCheckbox" class="hidden"/>
-        <label for="customCheckbox" class="flex items-center cursor-pointer select-none">
-        <div class="w-6 h-6 border border-gray-300 rounded-md flex items-center justify-center transition-all">
+       <div className="flex items-center">
+        <input type="checkbox" id="customCheckbox" className="hidden"/>
+        <label for="customCheckbox" className="flex items-center cursor-pointer select-none">
+        <div className="w-6 h-6 border border-gray-300 rounded-md flex items-center justify-center transition-all">
           <AiOutlineCheck className='text-transparent fill-current '/>
         </div>
       </label>

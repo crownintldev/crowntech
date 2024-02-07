@@ -34,13 +34,16 @@
               onClick={() => handleServiceClick(service)}
               className="flex flex-colh-full w-full  sm:flex-row border md:border-none mt-2 md:mt-0 mb-3 md:mb-0 duration-300 transition gap-3 rounded-md hover:bg-primary-blue100 hover:text-white px-2 py-2 cursor-pointer"
             >
-              <Image
+              <div>
+
+              </div>
+              {/* <Image
                 className="w-[30px] h-[30px] object-cover bg-center rounded-full"
                 width={200}
                 height={200}
                 src={`/${service.serviceImage.replace("public/", "")}`}
                 alt={`/${service.serviceImage.replace("public/", "")}`}
-              />
+              /> */}
               <div>
                 <HeadingH6  title={service.serviceName} />
                 <Para12

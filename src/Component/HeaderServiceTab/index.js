@@ -11,7 +11,7 @@ const HeaderServiceTab = () => {
   const [serviceinfo, setserviceinfo] = useState([]);
   const [filteredServiceInfo, setFilteredServiceInfo] = useState([]);
   const router = useRouter();
-  const { id, setid } = UseidContext();
+  const { id, setid } = UseidContext(null);
   const truncateText = (text, maxLength) => {
     if (text.length > maxLength) {
       return text.substring(0, maxLength) + "..."; // Truncate text and add ellipsis

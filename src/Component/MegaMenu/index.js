@@ -25,6 +25,7 @@ const MegaMenu = ({
       try {
         const response = await axios.get("/api/servicecategory");
         setservicecat(response.data.servicecategories);
+        console.log("Mega menu" , response.data.servicecategories)
         // Optionally set the first category as active by default
         if (response.data.servicecategories.length > 0) {
           setActiveCategoryId(response.data.servicecategories[0].id);

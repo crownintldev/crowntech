@@ -28,13 +28,7 @@ export default function Home() {
  ) : (
  <LayoutProvider>
     <Header/>
-    <Hero
-    heading={"Crown International Technology"}
-    title={'“Crown International Technology: Redefining the Digital Frontier Unlocking Digital Potential, Empowering Global Progress.”'}
-    btn1={'Contact Us'}
-    btn2={'Learn More'}
-    
-    />
+    <Hero/>
     <Brand/>
     <Technology/>
     <Information

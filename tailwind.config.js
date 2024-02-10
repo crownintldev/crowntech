@@ -135,9 +135,9 @@ module.exports = {
           white:"#ffffff",
           black:"#000000",
           alertlight:"#E2DFFF",
-          btn1:"#0000CC",
-          btn2:"#0303e0",
-          btn3:"#7500FF",
+          btn1:"#0042d3",
+          btn2:"#0056ee",
+          btn3:"#3335D7",
 
         },     
       },

@@ -30,7 +30,7 @@ const Technology = () => {
 
         <div className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 gap-5">
   {Aboutcore && Aboutcore.service.map((array, index) => (
-    <motion.div  key={index} className={`shadow-lg group mb-8 rounded-lg max-h-full h-auto flex justify-center items-center relative  bg-primary-blue100 hover:bg-primary-blue200   dark:bg-primary-white`} style={{
+    <motion.div  key={index} className={`shadow-lg group mb-8 rounded-lg max-h-full h-auto flex justify-center items-center relative  bg-primary-blue400 hover:bg-primary-blue300   dark:bg-primary-white`} style={{
       scale, // Apply the scale effect to the entire card
     }}>
       <div className="p-4 rounded-lg group-hover:opacity-25">
@@ -39,7 +39,7 @@ const Technology = () => {
         <Para16 className="pl-2" title={array.para} />
       </div>
       
-      <div className={`absolute opacity-0 w-full h-auto mt-10 mb-10 flex flex-col p-5 rounded-lg  group-hover:opacity-100 bg-primary-blue100 hover:bg-primary-blue200  dark:bg-primary-white`}>
+      <div className={`absolute opacity-0 w-full h-auto mt-10 mb-10 flex flex-col p-5 rounded-lg  group-hover:opacity-100 bg-primary-blue300 hover:bg-primary-blue300  dark:bg-primary-white`}>
         {array.item.map((items, index) => (
           <div className="flex flex-col gap-3" key={index}>
             <div className="flex">
@@ -49,7 +49,7 @@ const Technology = () => {
           </div>
         ))}
         <Link className="mt-3" href={`${array.ref}`}>
-          <Button className="bg-primary-blue100 hover:bg-primary-blue200 text-primary-white h-10" text="View More" />
+          <Button className="bg-primary-blue300 hover:bg-primary-blue400 text-primary-white h-10" text="View More" />
         </Link>
       </div>
     </motion.div>

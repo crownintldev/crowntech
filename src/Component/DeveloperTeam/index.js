@@ -18,11 +18,11 @@ const DeveloperTeam = () => {
           {DevTeam.map((array, index) => (
             <div className="relative mt-20" key={index}>
               <div
-                className={`group rounded overflow-hidden shadow-md h-full max-h-full  bg-primary-blue100 dark:bg-primary-white `}
+                className={`group rounded overflow-hidden shadow-md h-full max-h-full  bg-primary-blue400 dark:bg-primary-white `}
               >
                 <div className="absolute -mt-20 w-full flex justify-center">
                   <div
-                    className={`h-36 w-36 border-4  rounded-full border-primary-blue200 dark:border-white`}
+                    className={`h-36 w-36 border-4  rounded-full border-primary-blue400 dark:border-white `}
                   >
                     <Image
                       src={array.image}

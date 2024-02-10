@@ -78,7 +78,7 @@ const MegaMenu = ({
         >
           <div
             onClick={toggleMenu}
-            className="border-2 hover:scale-105 m-2 hover:border-primary-blue100 duration-300 transition rounded-md flex p-2 items-center justify-center w-10"
+            className="border-2 hover:scale-105 m-2 hover:border-primary-blue400 duration-300 transition rounded-md flex p-2 items-center justify-center w-10"
           >
             <ImCross />
           </div>
@@ -92,7 +92,7 @@ const MegaMenu = ({
                     activeCategoryId === category.id
                       ? "active bg-primary-blue300 text-primary-white"
                       : ""
-                  } p-2 rounded-md mt-2 mb-2 hover:bg-primary-blue200 hover:text-primary-white transition duration-300`}
+                  } p-2 rounded-md mt-2 mb-2 hover:bg-primary-blue300 hover:text-primary-white transition duration-300`}
                 >
                   <HeadingH6 initial={{ opacity: 1, x: 0 }}
               animate={{ opacity: 1, x: 0 }}

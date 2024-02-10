@@ -176,7 +176,7 @@
               <div className="lg:hidden mt-[9px]">
                 <button
                   onClick={toggleMobileMenu}
-                  className="inline-flex items-center bg-primary-blue200 text-primary-white  rounded-lg p-2 hover:bg-primary-blue200 transition duration-300"
+                  className="inline-flex items-center bg-primary-blue400 text-primary-white  rounded-lg p-2 hover:bg-primary-blue400 transition duration-300"
                 >
                   {mobileMenuOpen ? (
                     <IoIosArrowUp className="text-2xl mt-[5px]" />

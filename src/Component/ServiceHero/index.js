@@ -79,7 +79,7 @@ const ServiceHero = () => {
   return (
     <>
       <Container className="p-2 md:p-0   flex justify-end ">
-        <div className="p-2 block md:hidden rounded-lg bg-primary-blue100 text-white ">
+        <div className="p-2 block md:hidden rounded-lg bg-primary-blue400 text-white ">
           <RiMenu4Line
             className={showCard ? "visible" : "hidden"}
             size={25}
@@ -119,7 +119,7 @@ const ServiceHero = () => {
                 {tablink.map((anch, index) => (
                   <NextLink
                     key={anch.id || index + 1}
-                    className={` hover:text-primary-blue100 flex gap-2`}
+                    className={` hover:text-primary-blue300 flex gap-2`}
                     href={`${anch.href}`}
                   >
                     {anch.icon}
@@ -136,7 +136,7 @@ const ServiceHero = () => {
             />
             <Anchor
               affix={false}
-              className={"light-theme "}
+              className={"light-theme  dark:text-black" }
             >
               {tabshow.map((anch, index) => (
                 <Link
@@ -151,7 +151,7 @@ const ServiceHero = () => {
               {tablink.map((anch, index) => (
                 <NextLink
                   key={anch.id || index + 1}
-                  className={` hover:text-primary-blue100 flex gap-2`}
+                  className={` hover:text-primary-blue300 flex gap-2`}
                   href={`${anch.href}`}
                 >
                   {anch.icon}

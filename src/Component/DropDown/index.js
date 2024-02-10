@@ -33,7 +33,7 @@ const DropDown = ({ array, text, icon, onLinkClick,BtnClass, textSize = 'font-se
                 {array.items.map((items, index) => (
                   <div onClick={onLinkClick} key={index}>
                     <Link className='' href={items.href}  key={index}>
-                      <div className="flex gap-3 md:gap-5 justify-between items-center rounded-md hover:bg-primary-blue100 hover:text-white px-2 py-2">
+                      <div className="flex gap-3 md:gap-5 justify-between items-center rounded-md hover:bg-primary-blue300 hover:text-white px-2 py-2">
                         {items.title}
                         <div className='bg-blue-600 text-[10px] text-white py-1 px-2 rounded-full'>
                          {items.subtitle}

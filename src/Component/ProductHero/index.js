@@ -78,7 +78,7 @@ const ProductHero = () => {
   return (
     <>
       <Container className="p-2 md:p-0   flex justify-end ">
-        <div className="p-2 block md:hidden rounded-lg bg-primary-blue100 ">
+        <div className="p-2 block md:hidden rounded-lg bg-primary-blue400 text-white">
           <RiMenu4Line
             className={!showCard ? "visible" : "hidden"}
             size={25}
@@ -133,7 +133,7 @@ const ProductHero = () => {
               {tablink.map((array, index) => (
                 <NextLink
                   key={index}
-                  className={` hover:text-primary-blue100 flex gap-2`}
+                  className={` hover:text-primary-blue300 flex gap-2`}
                   href={`${array.href}`}
                 >
                   {array.icon}
@@ -179,7 +179,7 @@ const ProductHero = () => {
                   <NextLink
                     href="/product"
                     key={index}
-                    className={` hover:bg-primary-blue100 p-2 shadow-2xl  dark:hover:bg-primary-blue100 dark:hover:text-white space-y-2 dark:shadow  hover:scale-105 transition duration-300 text-center pt-5 pb-5  rounded-md `}
+                    className={` hover:bg-primary-blue300 p-2 shadow-2xl  dark:hover:bg-primary-blue300 dark:hover:text-white space-y-2 dark:shadow  hover:scale-105 transition duration-300 text-center pt-5 pb-5  rounded-md `}
                   >
                     <Image
                       className="w-[50px] mx-auto"
@@ -201,7 +201,7 @@ const ProductHero = () => {
                   <NextLink
                     href="/product"
                     key={index}
-                    className={` hover:bg-primary-blue100 p-2 shadow-2xl dark:hover:bg-primary-blue100 dark:hover:text-white space-y-2 dark:shadow  hover:scale-105 transition duration-300 text-center pt-5 pb-5  rounded-md `}
+                    className={` hover:bg-primary-blue300 p-2 shadow-2xl dark:hover:bg-primary-blue300 dark:hover:text-white space-y-2 dark:shadow  hover:scale-105 transition duration-300 text-center pt-5 pb-5  rounded-md `}
                   >
                     <Image
                       className="w-[50px] mx-auto"

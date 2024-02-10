@@ -90,7 +90,7 @@ const SearchData = () => {
                         alt={service.serviceName}
                         width={64}
                         height={64}
-                        className="rounded-md"
+                        className="rounded-md w-16 h-16"
                       />
                       <div>
                         <HeadingH6 title={service.serviceName} />

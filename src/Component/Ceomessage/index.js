@@ -23,7 +23,7 @@ const CeoMessage = () => {
         
         />
       </div>
-      <div className=" rounded-md  pt-5 mt-20 bg-primary-blue100 dark:bg-white shadow-xl">
+      <div className=" rounded-md  pt-5 mt-20 bg-primary-blue400 dark:bg-white shadow-xl">
         <div className=" lg:p-8 md:p-6 sm:p-4 p-2 space-y-3 ">
           <HeadingH3 className={'border-b-2'} title={'CEO Message'}/>
           <Para18

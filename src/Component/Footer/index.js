@@ -16,8 +16,7 @@ const Footer = () => {
             <div className='grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-3 lg:grid-cols-3 xl:grid-cols-5  gap-3 space-y-5'>
               <FooterDiv>
                 <Logo />
-                <p className='font-semibold'>4517 Washington Ave.
-                  Manchester, Kentucky 39495</p>
+                <p className='font-semibold'>Office No. 406 , 4th Floor Rizwan Arcade I,Adam Jee Road Saddar, Rawalpindi,Punjab, Pakistan</p>
                 <p className='font-semibold '><span>Hours:</span> 8:00-17:00, Mon-Sat </p>
                
               </FooterDiv>

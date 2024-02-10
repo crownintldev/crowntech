@@ -46,7 +46,7 @@ const LoginForm = () => {
         <span class="ml-2">Remember Me</span>
         </div>
         
-        <Button className={"border-none w-full justify-center px-4 py-2 bg-gradient-to-r from-primary-btn1 hover:from-primary-btn3 via-primary-btn2 to-primary-btn3 hover:to-primary-btn1 text-primary-white transition duration-400 shadow-md"} text={"Login"}/>
+        <Button className={"border-none w-full justify-center px-4 py-2 bg-gradient-to-r from-primary-btn1 hover:from-primary-btn3 via-primary-btn2 to-primary-btn3 hover:to-primary-btn1 text-primary-black transition duration-400 shadow-md"} text={"Login"}/>
         <div className='flex'>
         <b >Don’t have an account? <span className='border-b-2 border-primary-gray400' ><Link href="/signup">Sign Up</Link></span></b>
         </div>
@@ -54,7 +54,7 @@ const LoginForm = () => {
         <b className='mt-10'>Or SignUp With</b>
         <div className='flex gap-5 justify-center mt-3'>
           <Button  className='border p-2 rounded-md hover:bg-blue-100' text={<FcGoogle size={25}/>}/>
-          <Button  className='border p-2 rounded-md hover:bg-blue-100 hover:text-black dark:text-black dark:hover:bg-black dark:hover:text-white text-white' text={<AiFillGithub size={25}/>}/>
+          <Button  className='border p-2 rounded-md hover:bg-blue-100 hover:text-black dark:text-black dark:hover:bg-black dark:hover:text-white text-primary-white' text={<AiFillGithub size={25}/>}/>
         </div>
         </div>
         </form>

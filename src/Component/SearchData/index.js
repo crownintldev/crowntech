@@ -58,7 +58,7 @@ const SearchData = () => {
         <input
           type="search"
           id="default-search"
-          className="block w-full p-4 pl-10 bg-primary-white text-black text-sm border-2 focus:outline-none rounded"
+          className="block w-full p-4 pl-10 bg-primary-black text-black text-sm border-2 focus:outline-none rounded"
           placeholder="Search"
           value={searchInput}
           onChange={handleSearchChange}

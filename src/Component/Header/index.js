@@ -130,7 +130,7 @@
                 >
                   <SearchData />
                 </Modal>
-                <Switcher />
+                {/* <Switcher /> */}
                 <Button
                   className="border-none px-2 py-1 gap-1  bg-gradient-to-r from-primary-btn1 hover:from-primary-btn3 via-primary-btn2 to-primary-btn3 hover:to-primary-btn1 text-primary-white transition duration-400 shadow-md"
                   onClick={showDrawer}

@@ -179,15 +179,15 @@ const ProductHero = () => {
                   <NextLink
                     href="/product"
                     key={index}
-                    className={` hover:bg-primary-blue300 p-2 shadow-2xl  dark:hover:bg-primary-blue300 dark:hover:text-white space-y-2 dark:shadow  hover:scale-105 transition duration-300 text-center pt-5 pb-5  rounded-md `}
+                    className={` hover:bg-primary-blue300 hover:text-primary-black p-2 shadow-2xl  dark:hover:bg-primary-blue300 dark:hover:text-white space-y-2 dark:shadow  hover:scale-105 transition duration-300 text-center pt-5 pb-5  rounded-md `}
                   >
                     <Image
                       className="w-[50px] mx-auto"
                       src={array.image}
                       alt={array.image}
                     />
-                    <HeadingH6 title={array.title} />
-                    <Para14 title={array.text} />
+                    <HeadingH6 className="hover:text-primary-black" title={array.title} />
+                    <Para14 className="hover:text-primary-black" title={array.text} />
                   </NextLink>
                 ))}
               </div>
@@ -201,15 +201,15 @@ const ProductHero = () => {
                   <NextLink
                     href="/product"
                     key={index}
-                    className={` hover:bg-primary-blue300 p-2 shadow-2xl dark:hover:bg-primary-blue300 dark:hover:text-white space-y-2 dark:shadow  hover:scale-105 transition duration-300 text-center pt-5 pb-5  rounded-md `}
+                    className={` hover:bg-primary-blue300 hover:text-primary-black   p-2 shadow-2xl dark:hover:bg-primary-blue300 dark:hover:text-white space-y-2 dark:shadow  hover:scale-105 transition duration-300 text-center pt-5 pb-5  rounded-md `}
                   >
                     <Image
                       className="w-[50px] mx-auto"
                       src={array.image}
                       alt={array.image}
                     />
-                    <HeadingH6 title={array.title} />
-                    <Para14 title={array.text} />
+                 <HeadingH6 className="hover:text-primary-black" title={array.title} />
+                    <Para14 className="hover:text-primary-black" title={array.text} />
                   </NextLink>
                 ))}
               </div>

@@ -18,10 +18,10 @@ const Newsletter = () => {
     <div className=' w-full md:w-6/12 hidden md:block'>
     <Image className='rounded-full' src={choosemain} alt='choosemain' />
     </div>
-    <div className='md:w-6/12 text-white space-y-4 '>
-        <Para18 title={"Newsletter"}/>
-        <HeadingH2 title={"Subcribe our newsletter"}/>
-        <Para16 title={"By clicking the button, you are agreeing with our Terms & Conditions"}/>
+    <div className='md:w-6/12 text-primary-black space-y-4 '>
+        <Para18 className='text-primary-black' title={"Newsletter"}/>
+        <HeadingH2 className='text-primary-black' title={"Subcribe our newsletter"}/>
+        <Para16 className='text-primary-black' title={"By clicking the button, you are agreeing with our Terms & Conditions"}/>
 
         <div className="flex items-center w-full md:w-4/5 border rounded bg-white p-3">
         <input className="appearance-none bg-transparent text-18 w-full text-black py-1 px-2 leading-tight focus:outline-none" type="text" placeholder="Subcribe our newsletter"/>

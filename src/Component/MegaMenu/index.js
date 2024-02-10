@@ -73,7 +73,7 @@ const MegaMenu = ({
       </button>
       {isOpen && (
         <div
-          className={`absolute top-0 left-0 lg:top-auto lg:mt-5 xl:mt-4 ${alignment}  z-20   shadow-lg bg-primary-blue500 dark:bg-primary-white`}
+          className={`absolute top-0 left-0 lg:top-auto lg:mt-5 xl:mt-4 ${alignment}  z-20   shadow-lg bg-primary-blue500 dark:bg-primary-black`}
           ref={dropdownRef}
         >
           <div
@@ -90,13 +90,11 @@ const MegaMenu = ({
                   onClick={() => handleTabClick(category.id)}
                   className={`${
                     activeCategoryId === category.id
-                      ? "active bg-primary-blue300 text-primary-white"
+                      ? "active bg-primary-blue300 text-primary-black"
                       : ""
-                  } p-2 rounded-md mt-2 mb-2 hover:bg-primary-blue300 hover:text-primary-white transition duration-300`}
+                  } p-2 rounded-md mt-2 mb-2 hover:bg-primary-blue300  hover:text-primary-black transition duration-300`}
                 >
-                  <HeadingH6 initial={{ opacity: 1, x: 0 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.1 }} title={category.catName} />
+                  <HeadingH6 className=""  title={category.catName} />
                 </div>
               ))}
             </div>

@@ -28,7 +28,7 @@ const Information = ({image , badge, title ,para , button,endicon,starticon,link
         <HeadingH3 className="" title={title}/>
         <Para16 title={para} />
         <Link className='x' href={`${link}`}>
-        <Button className='border-none mt-5  bg-gradient-to-r from-primary-btn1 hover:from-primary-btn3 via-primary-btn2 to-primary-btn3 hover:to-primary-btn1 text-primary-white transition duration-400 shadow-md  ' btnicon={starticon} text={button} endicon={endicon} />
+        <Button className='border-none mt-5  bg-gradient-to-r from-primary-btn1 hover:from-primary-btn3 via-primary-btn2 to-primary-btn3 hover:to-primary-btn1 text-primary-black transition duration-400 shadow-md  ' btnicon={starticon} text={button} endicon={endicon} />
         </Link>
         
        <div>

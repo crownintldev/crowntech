@@ -33,8 +33,8 @@ const DeveloperTeam = () => {
                   </div>
                 </div>
                 <div className="px-2 mt-16 text-center">
-                  <HeadingH4 className="" title={array.name} />
-                  <HeadingH6 className="" title={array.title} />
+                  <HeadingH4 className="text-primary-black" title={array.name} />
+                  <HeadingH6 className="text-primary-black" title={array.title} />
                   <div className="flex justify-center pt-3 pb-5 translate-y-10 opacity-0 duration-500 transition group-hover:opacity-100 group-hover:translate-y-0 ">
                     <Iconitem />
                   </div>

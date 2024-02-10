@@ -6,6 +6,8 @@ import { HeadingH3, HeadingH4 } from "../Heading";
 import Container from "../Container";
 import { Para12, Para14 } from "../ParaGraph";
 import axios from "axios";
+import Link from "next/link";
+import { BiRightArrowAlt } from "react-icons/bi";
 
 const PlanCard = ({ serviceTabId, setServiceplanId }) => {
   const [filteredServiceplan, setFilteredServiceplan] = useState([]);
@@ -55,23 +57,19 @@ const PlanCard = ({ serviceTabId, setServiceplanId }) => {
             {filteredServiceplan &&
               filteredServiceplan.map((items, index) => (
                 <div
-                  className={`  space-y-2 shadow  mb-5 rounded-lg p-4 hover:scale-105 transition duration-300 bg-primary-blue100  dark:bg-primary-white `}
+                  className={`  space-y-2 shadow  mb-5 rounded-lg p-4 hover:scale-105 transition duration-300 bg-primary-blue100  dark:bg-primary-black `}
                   key={index}
                 >
                   <div className="">
                     <HeadingH3
-                      initial={{ opacity: 1, x: 0 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      transition={{ duration: 0.1 }}
+                      
                       title={items.title}
                     />
                     <p className="font-normal">{items.text}</p>
                   </div>
                   <div>
                     <HeadingH4
-                      initial={{ opacity: 1, x: 0 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      transition={{ duration: 0.1 }}
+                      
                       title={items.price}
                       spans={"$"}
                     />
@@ -83,12 +81,10 @@ const PlanCard = ({ serviceTabId, setServiceplanId }) => {
                   </div>
                   <Button
                     text={"Choose Plan"}
-                    className={`w-full  justify-center flex bg-primary-white text-black  dark:bg-primary-blue200 dark:hover:bg-primary-blue300 dark:text-white border-none `}
+                    className={`w-full  justify-center flex bg-primary-black text-black  dark:bg-primary-blue200 dark:hover:bg-primary-blue300 dark:text-white border-none `}
                   />
                   <HeadingH4
-                    initial={{ opacity: 1, x: 0 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.1 }}
+                    
                     title={"Features"}
                   />
 
@@ -97,18 +93,14 @@ const PlanCard = ({ serviceTabId, setServiceplanId }) => {
                       <div className="flex" key={index}>
                         <TiTick size={20} />
                         <Para14
-                          initial={{ opacity: 1, x: 0 }}
-                          animate={{ opacity: 1, x: 0 }}
-                          transition={{ duration: 0.1 }}
+                          
                           title={items.option}
                         />
                       </div>
                     </>
                   ))}
                   <Para12
-                    initial={{ opacity: 1, x: 0 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.1 }}
+                    
                     title={
                       "This is project starting Price it will be increase on project scalability."
                     }
@@ -118,7 +110,10 @@ const PlanCard = ({ serviceTabId, setServiceplanId }) => {
           </div>
         </Container>
       ) : (
-        <>Contact Us for more information</>
+        <div className="flex justify-between items-center">
+        <Para14 title={'Contact Us for more information'}/>
+         <Link href={'/contact'} className={`bg-primary-black text-black shadow border-none flex p-2 rounded-md`} ><BiRightArrowAlt  size={25} />Contact</Link>
+     </div>
       )}
     </>
   );

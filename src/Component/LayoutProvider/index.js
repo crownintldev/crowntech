@@ -3,7 +3,7 @@ const LayoutProvider = ({ children , }) => {
 
     return (
       <>
-     <div className={` w-full bg-primary-blue500 text-white dark:bg-primary-white dark:text-black`}>
+     <div className={` w-full bg-primary-blue500 text-primary-white dark:bg-primary-black dark:text-primary-black`}>
         {children}
         </div>
       </>    

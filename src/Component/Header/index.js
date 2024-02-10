@@ -101,7 +101,7 @@
     return (
       <>
         <nav
-          className={`   text-white dark:text-black  sticky top-0  z-20 shadow-xl  ${
+          className={` text-primary-white dark:text-primary-black  sticky top-0  z-20 shadow-xl  ${
             scrollingUp ? defaultStyle : scrolledStyle
           }`}
         >
@@ -132,7 +132,7 @@
                 </Modal>
                 {/* <Switcher /> */}
                 <Button
-                  className="border-none px-2 py-1 gap-1  bg-gradient-to-r from-primary-btn1 hover:from-primary-btn3 via-primary-btn2 to-primary-btn3 hover:to-primary-btn1 text-primary-white transition duration-400 shadow-md"
+                  className="border-none px-2 py-1 gap-1  bg-gradient-to-r from-primary-btn1 hover:from-primary-btn3 via-primary-btn2 to-primary-btn3 hover:to-primary-btn1 text-primary-black transition duration-400 shadow-md"
                   onClick={showDrawer}
                   btnicon={<HiOutlineBars3BottomRight size={25} />}
                   text="APP"
@@ -154,7 +154,7 @@
                     className={`rounded-lg shadow-xl  p-3  dark:backdrop-blur-2xl    backdrop-blur-2xl`}
                   >
                     <div
-                      className={`flex  justify-center border-2 hover:scale-105  shadow-md text-primary-white hover:shadow-lg duration-100 transition rounded-md p-2 w-10`}
+                      className={`flex  justify-center border-2 hover:scale-105  shadow-md text-primary-black hover:shadow-lg duration-100 transition rounded-md p-2 w-10`}
                       onClick={handleCloseDrawer}
                     >
                       <ImCross />
@@ -176,7 +176,7 @@
               <div className="lg:hidden mt-[9px]">
                 <button
                   onClick={toggleMobileMenu}
-                  className="inline-flex items-center bg-primary-blue400 text-primary-white  rounded-lg p-2 hover:bg-primary-blue400 transition duration-300"
+                  className="inline-flex items-center bg-primary-blue400 text-primary-black  rounded-lg p-2 hover:bg-primary-blue400 transition duration-300"
                 >
                   {mobileMenuOpen ? (
                     <IoIosArrowUp className="text-2xl mt-[5px]" />
@@ -186,7 +186,7 @@
                 </button>
                 {mobileMenuOpen && (
                   <div
-                    className={`absolute -z-10 inset-x-0  h-screen origin-top rounded-b-2xl px-6 pb-6 pt-10 bg-primary-blue500 dark:bg-primary-white
+                    className={`absolute -z-10 inset-x-0  h-screen origin-top rounded-b-2xl px-6 pb-6 pt-10 bg-primary-blue500 dark:bg-primary-black
                     `}
                   >
                     <div className="space-y-4  flex-col flex z-50">

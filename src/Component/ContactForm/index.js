@@ -21,7 +21,7 @@ const ContactForm = () => {
                         Contactdata.map((array, index) => (
                             <div key={index}>
                                 <div className='flex hover:scale-105 duration-300 transition'>
-                                    <div className='w-1/12'>
+                                    <div className='w-1/12'> 
                                         {array.icon}
                                     </div>
                                     <div className='pt-8 w-11/12'>
@@ -75,7 +75,7 @@ const ContactForm = () => {
                             />
                         </div>
                         <Commentarea/>
-                        <Button className='border-none px-4 py-2 mt-5 bg-gradient-to-r from-primary-btn1 hover:from-primary-btn3 via-primary-btn2 to-primary-btn3 hover:to-primary-btn1 text-primary-white transition duration-400 shadow-md' text={"Submit"}/>
+                        <Button className='border-none px-4 py-2 mt-5 bg-gradient-to-r from-primary-btn1 hover:from-primary-btn3 via-primary-btn2 to-primary-btn3 hover:to-primary-btn1 text-primary-black transition duration-400 shadow-md' text={"Submit"}/>
 
 
 

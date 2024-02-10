@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 export const HeadingH1 = ({icon, title,title1,className ,spanclass, }) => {
   return (
    <div >
-      <span className={`xl:text-xl-h1 lg:text-lg-h1 text-md-h1 font-semibold  gap-3 ${className}`}>
+      <span className={`xl:text-xl-h1 lg:text-lg-h1 text-md-h1 font-semibold   gap-3 ${className}`}>
         {icon}{title}
         <span className={`${spanclass}`}>
         {title1}
@@ -14,7 +14,7 @@ export const HeadingH1 = ({icon, title,title1,className ,spanclass, }) => {
   )
 };
 
-export const HeadingH2 = ({icon, title ,className, }) => {
+export const HeadingH2 = ({icon, title ,className='text-primary-white', }) => {
   return (
    <div >
       <p className={`xl:text-xl-h2 lg:text-lg-h2 text-md-h2 font-semibold  gap-3 ${className}`}>
@@ -24,7 +24,7 @@ export const HeadingH2 = ({icon, title ,className, }) => {
   )
 };
 
-export const HeadingH3 = ({icon, title ,className, }) => {
+export const HeadingH3 = ({icon, title ,className='text-primary-white', }) => {
   return (
    <div >
       <p className={`xl:text-xl-h3 lg:text-lg-h3 text-md-h4 font-semibold  gap-3 ${className}`}>
@@ -33,26 +33,26 @@ export const HeadingH3 = ({icon, title ,className, }) => {
     </div>
   )
 };
-export const HeadingH4 = ({icon, title ,className,spans,    }) => {
+export const HeadingH4 = ({icon, title ,className='text-primary-white',spans,    }) => {
   return (
     <div>
-      <p className={`xl:text-xl-h4 lg:text-lg-h4 text-md-h4 font-semibold  gap-3 ${className}`}>
+      <p className={`xl:text-xl-h4 lg:text-lg-h4 text-md-h4 font-semibold   gap-3 ${className}`}>
         {icon}{title}{spans}
       </p>
     </div>
   )
 };
-export const HeadingH5 = ({icon, title ,className,spans,}) => {
+export const HeadingH5 = ({icon, title ,className='text-primary-white',spans,}) => {
   return (
    <div >
-      <p className={`xl:text-xl-h5 lg:text-lg-h5 text-md-h5 font-semibold gap-3 ${className}`}>
+      <p className={`xl:text-xl-h5 lg:text-lg-h5 text-md-h5 font-semibold  gap-3 ${className}`}>
         {icon}{title}{spans}
       </p>
     </div>
   )
 };
 
-export const HeadingH6 = ({icon, title ,className,
+export const HeadingH6 = ({icon, title ,className='text-primary-white',
   //  
   
   }) => {

@@ -32,7 +32,7 @@
             <div
               key={index}
               onClick={() => handleServiceClick(service)}
-              className="flex flex-colh-full w-full  sm:flex-row border md:border-none mt-2 md:mt-0 mb-3 md:mb-0 duration-300 transition gap-3 rounded-md hover:bg-primary-blue300 hover:text-white px-2 py-2 cursor-pointer"
+              className="flex flex-colh-full w-full  sm:flex-row border md:border-none mt-2 md:mt-0 mb-3 md:mb-0 duration-300 transition gap-3 rounded-md hover:bg-primary-blue300 text-primary-white hover:text-primary-black px-2 py-2 cursor-pointer"
             >
               <div>
 
@@ -45,8 +45,8 @@
                 alt={`/${service.serviceImage.replace("public/", "")}`}
               /> */}
               <div>
-                <HeadingH6  title={service.serviceName} />
-                <Para12
+                <HeadingH6 className="hover:text-primary-black"  title={service.serviceName} />
+                <Para12 className="hover:text-primary-black"
                   title={truncateText(service.serviceText, 80)}
                 />
               </div>

@@ -16,9 +16,7 @@ const Plan = ({ serviceTabId,setServiceplanId }) => {
           <Para18 className={''} title={'Pick your plan.'}/>
           <Para18 title={'Change whenever you want.'}/>
         </div>
-        <div className='flex justify-end items-end'>
-          <Button className={`bg-primary-white text-black shadow border-none`} endicon={<BiRightArrowAlt className='mt-1' size={20} />} text="Learn Mores" />
-        </div>
+       
       </div>
       <PlanCard serviceTabId={serviceTabId} setServiceplanId={setServiceplanId}/>
 

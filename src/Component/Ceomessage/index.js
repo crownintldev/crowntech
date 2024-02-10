@@ -25,9 +25,9 @@ const CeoMessage = () => {
       </div>
       <div className=" rounded-md  pt-5 mt-20 bg-primary-blue400 dark:bg-white shadow-xl">
         <div className=" lg:p-8 md:p-6 sm:p-4 p-2 space-y-3 ">
-          <HeadingH3 className={'border-b-2'} title={'CEO Message'}/>
+          <HeadingH3 className={'border-b-2 text-primary-black'} title={'CEO Message'}/>
           <Para18
-            className={"pt-3 pb-3 "}
+            className={"pt-3 pb-3 text-primary-black "}
             icon={<FaQuoteLeft size={25} />}
             title={
               "At PF, we consult and lead compliance-based solutions and implement industry best practices for clients across the globe. What started off as a team of two, has now significantly grown and consists of more than 800 dedicated employees, working at 12 locations within Pakistan and 5 locations internationally."
@@ -35,10 +35,10 @@ const CeoMessage = () => {
             endicon={<FaQuoteRight size={25} />}
           />
           <HeadingH4
-            className={"dark:text-primary-blue100"}
+            className={"dark:text-primary-blue100 text-primary-black"}
             title={"Mubashir Nazir"}
           />
-          <Para16 className={"font-medium"} title={"CEO & FOUNDER"} />
+          <Para16 className={"font-medium text-primary-black"} title={"CEO & FOUNDER"} />
         </div>
       
       </div>

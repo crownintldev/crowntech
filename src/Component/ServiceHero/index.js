@@ -170,24 +170,18 @@ const ServiceHero = () => {
                   <div className={`pt-5 w-full `} key={index}>
                     <div className="space-y-4 ">
                       <Para18
-                        initial={{ opacity: 1, x: 0 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.1 }}
+                        
                         className={"font-bold text-justify"}
                         title={"________ Service"}
                       />
                       <div className="-space-y-3">
                         <HeadingH1
-                          initial={{ opacity: 1, x: 0 }}
-                          animate={{ opacity: 1, x: 0 }}
-                          transition={{ duration: 0.1 }}
+                         
                           title={service.serviceName}
                         />
                       </div>
                       <Para16
-                        initial={{ opacity: 1, x: 0 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.1 }}
+                      
                         title={service.serviceText}
                       />
                     </div>

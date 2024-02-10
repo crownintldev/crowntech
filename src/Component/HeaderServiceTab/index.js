@@ -49,7 +49,7 @@ const HeaderServiceTab = () => {
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-5 p-2">
         {serviceinfo.map((service, index) => (
           <div key={index} onClick={() => handleServiceClick(service.id)}
-            className="bg-primary-white hover:bg-primary-light hover:scale-105 cursor-pointer flex items-center transition duration-300 gap-2 p-3 shadow-lg text-primary-white rounded-md"
+            className="bg-primary-black  hover:bg-primary-light hover:scale-105 cursor-pointer flex items-center transition duration-300 gap-2 p-3 shadow-lg  rounded-md"
           >
             <Image
               className="w-[50px] h-[50px] rounded-[20px]"

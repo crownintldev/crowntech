@@ -23,7 +23,7 @@ const TeamHero = () => {
         <div className=' space-y-4 p-2 sm:p-3 md:p-6 lg:p-14'>
           <HeadingH1 title={"Customers Love Our Creative Team, and So Will You"} />
           <div className='flex flex-wrap gap-4'>
-            <Button text='Get Started' className='border-none px-4 py-2 bg-gradient-to-r from-primary-btn1 hover:from-primary-btn3 via-primary-btn2 to-primary-btn3 hover:to-primary-btn1 text-primary-white transition duration-400 shadow-md'/>
+            <Button text='Get Started' className='border-none px-4 py-2 bg-gradient-to-r from-primary-btn1 hover:from-primary-btn3 via-primary-btn2 to-primary-btn3 hover:to-primary-btn1 text-primary-black transition duration-400 shadow-md'/>
             <Button text='Learn More' endicon={<BiRightArrowAlt className='mt-1' size={20}/>} className=' hover:border-gray-600  border-none' />
           </div>
           <Para16 title={"“Highly recommend Iori Agency! They guide us on marketing initiatives and develop great strategies to increase our return on investment. The agency is excellent at being cooperative and responding quickly.”"}/>

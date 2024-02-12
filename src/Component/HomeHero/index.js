@@ -48,7 +48,7 @@ const Hero = () => {
     <div className={"list"}>
         <div className={"item"}>
             <Image src={img1} alt="Image 1" layout="fill" objectFit="cover" />
-            <div className="content">
+            <div className="content space-y-3">
                     <div className="author">TECHNOLOGY</div>
                     <div className="title">DESIGN SLIDER</div>
                     <div className="topic">React js</div>
@@ -60,7 +60,7 @@ const Hero = () => {
         </div>
         <div className={"item"}>
             <Image src={img2} alt="Image 1" layout="fill" objectFit="cover" />
-            <div className="content">
+            <div className="content space-y-3">
                     <div className="author">TECHNOLOGY</div>
                     <div className="title">DESIGN SLIDER</div>
                     <div className="topic">Nextjs</div>
@@ -72,7 +72,7 @@ const Hero = () => {
         </div>
         <div className={"item"}>
             <Image src={img3} alt="Image 1" layout="fill" objectFit="cover" />
-            <div className="content">
+            <div className="content space-y-3">
                     <div className="author">TECHNOLOGY</div>
                     <div className="title">DESIGN SLIDER</div>
                     <div className="topic">Angular</div>
@@ -84,7 +84,7 @@ const Hero = () => {
         </div>
         <div className={"item"}>
             <Image src={img4} alt="Image 1" layout="fill" objectFit="cover" />
-            <div className="content">
+            <div className="content space-y-3">
                     <div className="author">TECHNOLOGY</div>
                     <div className="title">DESIGN SLIDER</div>
                     <div className="topic">Diango</div>

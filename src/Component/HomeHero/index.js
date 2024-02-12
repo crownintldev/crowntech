@@ -146,7 +146,7 @@ const Hero = () => {
       <Button onClick={() => showSlider('next')} endicon={<IoIosArrowForward  size={25}/>}/>
 
     </div> */}
-    <div className={"time "}></div>
+    <div className={"time"}></div>
 </div>
 );
 };

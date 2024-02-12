@@ -266,7 +266,7 @@ html {
 }
 .carousel .list .item .content{
   position: absolute;
-  top: 10%;
+  top: 8%;
   width: 1140px;
   max-width: 80%;
   left: 50%;
@@ -278,13 +278,13 @@ html {
 }
 .carousel .list .item .author{
   font-weight: bold;
-  letter-spacing: 10px;
+  letter-spacing: 5px;
 }
 .carousel .list .item .title,
 .carousel .list .item .topic{
-  font-size: 5em;
+  font-size: 4em;
   font-weight: bold;
-  line-height: 1.3em;
+  line-height: 1.1em;
 }
 .carousel .list .item .topic{
   color: #0056ee;
@@ -328,7 +328,7 @@ html {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 20px;
+  border-radius: 10px;
 }
 .thumbnail .item .content{
   color: #fff;
@@ -415,7 +415,7 @@ html {
   position: absolute;
   bottom: 50px;
   left: 50%;
-  border-radius: 30px;
+  border-radius: 20px;
   animation: showImage .5s linear 1 forwards;
 }
 @keyframes showImage{

@@ -314,7 +314,7 @@ html {
   bottom: 50px;
   left: 50%;
   width: max-content;
-  z-index: 100;
+  z-index: 10;
   display: flex;
   gap: 20px;
 }
@@ -348,7 +348,7 @@ html {
   position: absolute;
   top: 80%;
   right: 52%;
-  z-index: 100;
+  z-index: 10;
   width: 300px;
   max-width: 30%;
   display: flex;
@@ -433,7 +433,7 @@ html {
   animation: showThumbnail .5s linear 1 forwards;
 }
 .carousel.prev .list .item img{
-  z-index: 100;
+  z-index: 10;
 }
 @keyframes showThumbnail{
   from{

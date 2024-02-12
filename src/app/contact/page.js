@@ -24,7 +24,13 @@ const Contact = () => {
     <>
       <LayoutProvider>
         <Header />
-        <ContactHero />
+        <ContactHero
+        title={"________ Get in Touch"}
+        heading1={"We’d love to hear "}
+        heading2={" from you."}
+        className={'text-primary-blue100'}
+        para={"“Crown International Technology: Redefining the Digital Frontier Unlocking Digital Potential, Empowering Global Progress.”"}
+        />
         <ContactInfo />
         <ContactForm />
         <Newsletter />

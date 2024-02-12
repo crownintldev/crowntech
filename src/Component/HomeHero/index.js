@@ -141,12 +141,12 @@ const Hero = () => {
                 </div>
         </div>
     </div>
-    <div className={"arrows text-center"}>
+    {/* <div className={"arrows text-center"}>
       <Button onClick={() => showSlider('prev')} endicon={<IoIosArrowBack size={25} />}/>
       <Button onClick={() => showSlider('next')} endicon={<IoIosArrowForward  size={25}/>}/>
 
-    </div>
-    <div className={"time"}></div>
+    </div> */}
+    <div className={"time "}></div>
 </div>
 );
 };

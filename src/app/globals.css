@@ -455,7 +455,7 @@ html {
 
 .carousel .time{
   position: absolute;
-  z-index: 1000;
+  z-index: 10;
   width: 0%;
   height: 3px;
   background-color: #0056ee;

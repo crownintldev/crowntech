@@ -7,6 +7,8 @@ import img3 from '../../../public/assets/images/img3.jpg';
 import img4 from '../../../public/assets/images/img4.jpg';
 import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io';
 import Button from '../Button';
+import { slider } from '../Constants';
+import { Para12, Para16, Para18 } from '../ParaGraph';
 
 const Hero = () => {
   const carouselRef = useRef(null);
@@ -43,103 +45,41 @@ const Hero = () => {
       return () => clearInterval(slideInterval);
   }, []);
 
+  const truncateText = (text, maxLength) => {
+    if (text.length > maxLength) {
+      return text.substring(0, maxLength) + "..."; // Truncate text and add ellipsis
+    }
+    return text;
+  };
+
   return (
     <div className={"carousel h-[90vh] lg:h-[70vh]"} ref={carouselRef}>
-    <div className={"list"}>
-        <div className={"item"}>
-            <Image src={img1} alt="Image 1" layout="fill" objectFit="cover" />
-            <div className="content space-y-3">
-                    <div className="author">TECHNOLOGY</div>
-                    <div className="title">DESIGN SLIDER</div>
-                    <div className="topic">React js</div>
-                    <div className="des">
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut sequi, rem magnam nesciunt minima placeat, itaque eum neque officiis unde, eaque optio ratione aliquid assumenda facere ab et quasi ducimus aut doloribus non numquam. Explicabo, laboriosam nisi reprehenderit tempora at laborum natus unde. Ut, exercitationem eum aperiam illo illum laudantium?
+        <div className={"list"}>
+        {
+            slider.map((array, index)=>(
+                <div className={"item"} key={index}>
+                <Image src={array.image} alt="Image 1" layout="fill" objectFit="cover" />
+                <div className="content space-y-3">
+                        <div className="author">{array.author}</div>
+                        <div className="title">{array.title}</div>
+                        <div className="des">{array.dec} </div>
                     </div>
-                  
-                </div>
-        </div>
-        <div className={"item"}>
-            <Image src={img2} alt="Image 1" layout="fill" objectFit="cover" />
-            <div className="content space-y-3">
-                    <div className="author">TECHNOLOGY</div>
-                    <div className="title">DESIGN SLIDER</div>
-                    <div className="topic">Nextjs</div>
-                    <div className="des">
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut sequi, rem magnam nesciunt minima placeat, itaque eum neque officiis unde, eaque optio ratione aliquid assumenda facere ab et quasi ducimus aut doloribus non numquam. Explicabo, laboriosam nisi reprehenderit tempora at laborum natus unde. Ut, exercitationem eum aperiam illo illum laudantium?
-                    </div>
-                     
-                </div>
-        </div>
-        <div className={"item"}>
-            <Image src={img3} alt="Image 1" layout="fill" objectFit="cover" />
-            <div className="content space-y-3">
-                    <div className="author">TECHNOLOGY</div>
-                    <div className="title">DESIGN SLIDER</div>
-                    <div className="topic">Angular</div>
-                    <div className="des">
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut sequi, rem magnam nesciunt minima placeat, itaque eum neque officiis unde, eaque optio ratione aliquid assumenda facere ab et quasi ducimus aut doloribus non numquam. Explicabo, laboriosam nisi reprehenderit tempora at laborum natus unde. Ut, exercitationem eum aperiam illo illum laudantium?
-                    </div>
-                  
-                </div>
-        </div>
-        <div className={"item"}>
-            <Image src={img4} alt="Image 1" layout="fill" objectFit="cover" />
-            <div className="content space-y-3">
-                    <div className="author">TECHNOLOGY</div>
-                    <div className="title">DESIGN SLIDER</div>
-                    <div className="topic">Diango</div>
-                    <div className="des">
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut sequi, rem magnam nesciunt minima placeat, itaque eum neque officiis unde, eaque optio ratione aliquid assumenda facere ab et quasi ducimus aut doloribus non numquam. Explicabo, laboriosam nisi reprehenderit tempora at laborum natus unde. Ut, exercitationem eum aperiam illo illum laudantium?
-                    </div>
-                   
-                </div>
-        </div>
+            </div>
+            ))
+        }
     </div>
     <div className={"thumbnail"}>
-        <div className={"item"}>
-            <Image src={img1} alt="Thumbnail 1" layout="fill" objectFit="cover" />
+    {
+            slider.map((array, index)=>(
+        <div className={"item"} key={index}>
+            <Image src={array.image} alt="Thumbnail 1" layout="fill" objectFit="cover" />
             <div className="content">
-                    <div className="title">
-                        Name Slider
-                    </div>
-                    <div className="description">
-                        Description
-                    </div>
+                    <div className="title">{array.title} </div>
+                    <Para18 className="description" title={truncateText(array.dec, 10)}/>
                 </div>
         </div>
-        <div className={"item"}>
-            <Image src={img2} alt="Thumbnail 1" layout="fill" objectFit="cover" />
-            <div className="content">
-                    <div className="title">
-                        Name Slider
-                    </div>
-                    <div className="description">
-                        Description
-                    </div>
-                </div>
-        </div>
-        <div className={"item"}>
-            <Image src={img3} alt="Thumbnail 1" layout="fill" objectFit="cover" />
-            <div className="content">
-                    <div className="title">
-                        Name Slider
-                    </div>
-                    <div className="description">
-                        Description
-                    </div>
-                </div>
-        </div>
-        <div className={"item"}>
-            <Image src={img4} alt="Thumbnail 1" layout="fill" objectFit="cover" />
-            <div className="content">
-                    <div className="title">
-                        Name Slider
-                    </div>
-                    <div className="description">
-                        Description
-                    </div>
-                </div>
-        </div>
+          ))
+        }
     </div>
     {/* <div className={"arrows text-center"}>
       <Button onClick={() => showSlider('prev')} endicon={<IoIosArrowBack size={25} />}/>

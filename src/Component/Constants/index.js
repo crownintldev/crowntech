@@ -31,11 +31,21 @@ import { AiOutlineGlobal, AiOutlineProject } from "react-icons/ai";
 import { FcConferenceCall} from "react-icons/fc";
 import { PiPersonArmsSpreadBold} from "react-icons/pi";
 import { HiDocumentDuplicate } from "react-icons/hi2";
+import img1 from '../../../public/assets/images/img1.jpg';
+import img2 from '../../../public/assets/images/img2.jpg';
+import img3 from '../../../public/assets/images/img3.jpg';
+import img4 from '../../../public/assets/images/img4.jpg';
 
 
 
 
+export const slider =[
+  {id:"1" , image:img1, author:"Technology", title:"Next js", dec:"Next js is a cutting-edge React framework designed for crafting high-performance web applications. Developed by Vercel, it streamlines the development process by offering features like server-side rendering and static site generation, ensuring fast loading speeds and enhanced SEO. Its file-based routing system simplifies navigation, while built-in API routes enable seamless server-side logic integration."},
+  {id:"2" , image:img2, author:"Technology", title:"Express js", dec:"Express js is a flexible and minimalist web application framework for Node.js, providing a robust set of features for building web applications and APIs. It simplifies the process of creating server-side applications by offering a streamlined, unopinionated architecture that allows developers to structure their applications as they see fit."},
+  {id:"3" , image:img3, author:"Technology", title:"Django", dec:"Django is a high-level Python web framework that encourages rapid development and clean, pragmatic design. It follows the batteries-included philosophy, providing a comprehensive set of features out of the box, which enables developers to build web applications quickly and efficiently."},
+  {id:"4" , image:img4, author:"Technology", title:"React Native", dec:"React Native is a cutting-edge framework developed by Facebook that enables developers to create powerful native mobile applications using JavaScript and React. With React Native, developers can build cross-platform apps that run seamlessly on both iOS and Android devices, leveraging a single codebase for efficient development."},
 
+]
 
 
 

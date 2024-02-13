@@ -192,17 +192,17 @@ const ServiceHero = () => {
               )}
             </div>
 
-            <div id="media">
+            <div id="media" className="pt-20">
               <ServiceTab setServiceTabId={setServiceTabId} />
             </div>
 
-            <div id="plan" className="mt-5">
+            <div id="plan" className="pt-20">
               <Plan
                 serviceTabId={serviceTabId}
                 setServiceplanId={setServiceplanId}
               />
             </div>
-            <div id="faq" className="mt-5">
+            <div id="faq" className="pt-20">
               <Faq serviceplanId={serviceplanId} />
             </div>
           </div>

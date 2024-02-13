@@ -9,8 +9,8 @@ import Container from '../Container';
 const Team = () => {
 
   return (
-    <Container className={`pt-20 pb-20`}>
- <div className='relative pb-10 '>
+    <Container className={`pt-32`}>
+ <div className='relative'>
  <HeadingH6 title={"Our leadership team"} />
       <HeadingH2 title={"Meet the amazing team"} />
 
@@ -46,7 +46,6 @@ const Team = () => {
 
 
 </div>
-
     </Container>
   );
 };

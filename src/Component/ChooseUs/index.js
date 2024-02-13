@@ -13,22 +13,22 @@ const ChooseUs = ({className, flex = "md:flex",maintitle,image1,mainimage,image2
   return (
     <>
     <Container>
-    <div className='pt-20 pb-20 space-y-10'>
+    <div className='pt-32 space-y-10'>
         <HeadingH2 className={"text-center "} title={maintitle} />
         <div className={`flex flex-wrap md:flex-nowrap gap-4 ${className} ${flex}`}>
 
           <div className='relative w-full md:w-6/12 '>
-            <div className=' dark:bg-white bg-primary-blue100 shadow-lg backdrop-blur rounded-full w-32 h-42 absolute top-0 right-0 hidden md:flex  animate-bounce'>
+            <div className=' dark:bg-white bg-primary-black shadow-lg backdrop-blur rounded-full w-32 h-42 absolute top-0 right-0 hidden md:flex  animate-bounce'>
             <Image className=' p-1 w-32 h-42' width={200} height={200} src={image1} alt={image1} />
             </div>
             
             <Image className='rounded-full h-auto w-auto' width={500} height={500} src={mainimage} alt={mainimage} />
-            <div className=' dark:bg-white bg-primary-blue100 shadow-lg backdrop-blur rounded-full w-32 h-42 absolute bottom-0 md:bottom-10 lg:bottom-0 hidden md:flex  animate-bounce'>
+            <div className=' dark:bg-white bg-primary-black shadow-lg backdrop-blur rounded-full w-32 h-42 absolute bottom-0 md:bottom-10 lg:bottom-0 hidden md:flex  animate-bounce'>
             <Image className=' p-1 w-32 h-42' width={200} height={200} src={image2} alt={image2} />
             </div>
           </div>
           <div className={`space-y-3 w-full md:w-6/12 `}>
-            <Badges   className={` shadow-md text-center bg-primary-blue100 text-primary-black dark:bg-white  border-none `} title={badge} />
+            <Badges   className={` shadow-md text-center bg-primary-black text-primary-black dark:bg-white  border-none `} title={badge} />
             <HeadingH3  title={choosetitle} />
             <Para16 title={choosepara} />
 

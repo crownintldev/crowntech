@@ -8,7 +8,7 @@ import Image from "next/image";
 const DeveloperTeam = () => {
   return (
     <>
-      <Container className={`pt-20 pb-20`}>
+      <Container className={`pt-32`}>
         <div className="relative pb-10 ">
           <HeadingH6 title={"Our Developer Team"} />
           <HeadingH2 title={"Meet The Amazing Team"} />
@@ -18,11 +18,11 @@ const DeveloperTeam = () => {
           {DevTeam.map((array, index) => (
             <div className="relative mt-20" key={index}>
               <div
-                className={`group rounded overflow-hidden shadow-md h-full max-h-full  bg-primary-blue400 dark:bg-primary-white `}
+                className={`group rounded overflow-hidden shadow h-full max-h-full  bg-primary-black  `}
               >
                 <div className="absolute -mt-20 w-full flex justify-center">
                   <div
-                    className={`h-36 w-36 border-4  rounded-full border-primary-blue400 dark:border-white `}
+                    className={`h-36 w-36 shadow-lg border-4  rounded-full border-white `}
                   >
                     <Image
                       src={array.image}
@@ -33,8 +33,8 @@ const DeveloperTeam = () => {
                   </div>
                 </div>
                 <div className="px-2 mt-16 text-center">
-                  <HeadingH4 className="text-primary-black" title={array.name} />
-                  <HeadingH6 className="text-primary-black" title={array.title} />
+                  <HeadingH4  title={array.name} />
+                  <HeadingH6  title={array.title} />
                   <div className="flex justify-center pt-3 pb-5 translate-y-10 opacity-0 duration-500 transition group-hover:opacity-100 group-hover:translate-y-0 ">
                     <Iconitem />
                   </div>

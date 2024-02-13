@@ -18,7 +18,7 @@ const TeamMain = () => {
         title={"________ Team"}
         heading1={"Crown International "}
         heading2={"Technology"}
-        className={'text-primary-blue100'}
+        className={'text-primary-blue300'}
         para={"“Crown International Technology: Redefining the Digital Frontier Unlocking Digital Potential, Empowering Global Progress.”"}
       />
       <Aboutceo />

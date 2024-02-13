@@ -35,6 +35,12 @@ import img1 from '../../../public/assets/images/img1.jpg';
 import img2 from '../../../public/assets/images/img2.jpg';
 import img3 from '../../../public/assets/images/img3.jpg';
 import img4 from '../../../public/assets/images/img4.jpg';
+import hamail from '../../../public/assets/images/Hamail.jpeg';
+import Ahmad from '../../../public/assets/images/Ahmad.jpg';
+import Wahab from '../../../public/assets/images/wahab.jpg';
+import Bahadur from '../../../public/assets/images/Bahadur.jpg';
+
+
 
 
 
@@ -344,7 +350,7 @@ export const AboutTeam = [
 export const DevTeam = [
   {
     id: "1",
-    image: ceo,
+    image: hamail,
     name: "Muhammad Humail",
     title: "Full Stack Developer",
   },
@@ -356,19 +362,19 @@ export const DevTeam = [
   },
   {
     id: "3",
-    image: pr,
-    name: "Muhammad Ali",
+    image: Bahadur,
+    name: "Muhammad Bahadur",
     title: "Full Stack Developer",
   },
   {
     id: "4",
-    image: cto,
+    image: Wahab,
     name: "Muhammad Wahab",
     title: "Front-end Developer",
   },
   {
     id: "5",
-    image: cto,
+    image: Ahmad,
     name: "Muhammad Ahmad",
     title: "Front-end Developer",
   },

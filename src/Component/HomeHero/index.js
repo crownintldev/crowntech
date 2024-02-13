@@ -53,7 +53,7 @@ const Hero = () => {
   };
 
   return (
-    <div className={"carousel h-[90vh] lg:h-[70vh]"} ref={carouselRef}>
+    <div className={"carousel h-[90vh] lg:h-[70vh] "} ref={carouselRef}>
         <div className={"list"}>
         {
             slider.map((array, index)=>(

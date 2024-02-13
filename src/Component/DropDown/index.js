@@ -24,7 +24,7 @@ const DropDown = ({ array, text, icon, onLinkClick,BtnClass, textSize = 'font-se
       </button>
       {isOpen && (
         <div 
-          className={`fixed ${alignment} z-20 rounded-md shadow text-primary-white bg-primary-black dark:bg-primary-white`} >
+          className={`fixed ${alignment} z-20 rounded-md shadow text-primary-white bg-primary-black `} >
           {
             array.map((array, index) => (
           <div key={index}
@@ -35,7 +35,7 @@ const DropDown = ({ array, text, icon, onLinkClick,BtnClass, textSize = 'font-se
                     <Link className='' href={items.href}  key={index}>
                       <div className="flex gap-3 md:gap-5 justify-between items-center rounded-md hover:bg-primary-blue300 hover:text-white px-2 py-2">
                         {items.title}
-                        <div className='bg-blue-600 text-[10px] text-white py-1 px-2 rounded-full'>
+                        <div className='bg-primary-black shadow  text-[10px] font-bold text-primary-blue300 py-1 px-2 rounded-full'>
                          {items.subtitle}
                         </div>
                       </div>

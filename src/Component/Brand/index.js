@@ -60,7 +60,7 @@ function ParallaxText({ children, baseVelocity = 100 }) {
 
 export default function Brand() {
   return (
-    <Container className={"mt-20"}>
+    <Container className={"pt-32"}>
       <ParallaxText baseVelocity={-5}>Framer Motion</ParallaxText>
       <ParallaxText baseVelocity={5}>Scroll velocity</ParallaxText>
     </Container>

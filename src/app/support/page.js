@@ -15,7 +15,6 @@ const Support = () => {
 
   return (
     <LayoutProvider>
-      
       <Header />
       <SupportHero />
       <Topics />

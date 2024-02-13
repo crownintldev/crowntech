@@ -8,10 +8,10 @@ import heropolicy from '../../../public/assets/images/heropolicy.jpg'
 const PrivacyHero = () => {
   return (
     <>
-    <div className='bg-primary-blue100 h-[50vh] md:h-[70vh]  bg-policyright bg-no-repeat bg-right-top pt-10 md:pt-20'>
-    <Container className={'flex flex-col justify-center items-center space-y-5 text-primary-white'}>
+    <div className='bg-primary-blue100 h-[30vh] md:h-[40vh]  bg-policyright bg-no-repeat bg-right-top pt-10 md:pt-20'>
+    <Container className={'flex flex-col justify-center items-center space-y-5 text-primary-black'}>
        <HeadingH1 title={'Terms and Condition'}/> 
-       <Para16 title={'Under no circumstances shall AliThemes be liable for any direct, '}/>
+       <Para16 className='text-primary-black' title={'Under no circumstances shall AliThemes be liable for any direct, '}/>
      </Container>  
     </div>
     </>

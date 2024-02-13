@@ -85,13 +85,13 @@ const SearchData = () => {
                       title="Service"
                     />
                     <div className="flex gap-3 w-11/12">
-                      <Image
+                      {/* <Image
                         src={`/${service.serviceImage.replace("public/", "")}`}
                         alt={service.serviceName}
                         width={64}
                         height={64}
                         className="rounded-md w-16 h-16"
-                      />
+                      /> */}
                       <div>
                         <HeadingH6 title={service.serviceName} />
                         <Para12 title={truncateText(service.serviceText, 160)} />

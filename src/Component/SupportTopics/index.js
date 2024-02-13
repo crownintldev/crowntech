@@ -14,7 +14,7 @@ const Topics = () => {
 
   return (
     <>
-   <Container>
+   <Container className={'mt-20'}>
    <div
         className={` p-2`}
       >
@@ -43,14 +43,14 @@ const Topics = () => {
                 supportdata.map((array, index)=>(
                     <SwiperSlide key={index}>
               <div className="border rounded-md shadow flex gap-2 p-3 h-auto" >
-                <div className={`w-2/12 text-primary-white `}>
+                <div className={`w-2/12 text-primary-black `}>
                 {array.icon}
                 </div>
                 <div className={`space-y-3 pt-5 w-10/12 `}>
-                  <HeadingH5 className={`text-primary-white  `} title={array.title} />
+                  <HeadingH5 className={`text-primary-black  `} title={array.title} />
                   <Para16 className={"text-white"}
                     title={array.text} />
-                  <Button className={`border-none text-primary-white  `} text={'Get Started'} endicon={<BsArrowRightShort size={25}/>}/>
+                  <Button className={`border-none text-primary-black  `} text={'Get Started'} endicon={<BsArrowRightShort size={25}/>}/>
                 </div>
               </div>
             </SwiperSlide>

@@ -12,7 +12,7 @@ const Hero = () => {
   const carouselRef = useRef(null);
   const [autoSlide, setAutoSlide] = useState(null);
 
-  const timeRunning = 3000;
+  const timeRunning = 4000;
   const timeAutoNext = 7000;
 
   const showSlider = (type) => {
@@ -44,7 +44,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <div className={"carousel"} ref={carouselRef}>
+    <div className={"carousel h-[100vh] lg:h-[70vh]"} ref={carouselRef}>
     <div className={"list"}>
         <div className={"item"}>
             <Image src={img1} alt="Image 1" layout="fill" objectFit="cover" />

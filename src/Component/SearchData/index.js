@@ -78,7 +78,7 @@ const SearchData = () => {
           ) : (
             filteredData.map((service, index) => (
               <div key={index} className="mt-3 mb-6">
-                <Link href={`/service/${service.id}`} className="hover:text-black relative">
+                <Link href={`/service/${service.serviceName}`} className="hover:text-black relative">
                   <div className="border p-2 pt-5 mb-2 flex items-center rounded-md shadow cursor-pointer hover:border-primary-blue100 duration-300 transition">
                     <Para16
                       className="rounded-md font-medium bg-white w-20 text-center absolute left-3 -top-4 text-primary-blue100"

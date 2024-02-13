@@ -41,7 +41,7 @@ const Testimonial = () => {
   return (
    <div>
      <Container className={"pt-32"}>
-      <div className={` space-y-5 bg-testi bg-no-repeat bg-left-bottom`}>
+      <div className={` space-y-5  bg-no-repeat`}>
       <HeadingH2 className={''} title={"What our customers are saying"} />
       <div className='flex justify-between flex-wrap '>
         <Para16 title={`Hear from our users who have saved thousands on their Startup and SaaS solution spend`} />
@@ -59,7 +59,7 @@ const Testimonial = () => {
         >
           {Testimonialdata.map((array, index) => (
             <SwiperSlide className='m-0 md:m-3 mb-10 w-full' key={index}>
-              <div className={`border-none p-3 shadow duration-300 transition rounded-md backdrop-blur-3xl `}>
+              <div className={`border-none bg-transparent p-3 shadow duration-300 transition rounded-md backdrop-blur-3xl `}>
                 <div className=' bg-quote bg-no-repeat bg-right-top space-y-5 '>
                   <div className='flex gap-4'>
                     <div className='w-2/12 h-2/12'>

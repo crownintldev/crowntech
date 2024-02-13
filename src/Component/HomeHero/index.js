@@ -60,7 +60,7 @@ const Hero = () => {
                 <div className={"item"} key={index}>
                 <Image src={array.image} alt="Image 1" layout="fill" objectFit="cover" />
                 <div className="content space-y-3">
-                        <div className="author">{array.author}</div>
+                        <div className="author text-primary-blue300 text-[18px]">{array.author}</div>
                         <div className="title">{array.title}</div>
                         <div className="des">{array.dec} </div>
                     </div>

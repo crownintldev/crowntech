@@ -363,7 +363,7 @@ export const DevTeam = [
   {
     id: "3",
     image: Bahadur,
-    name: "Muhammad Bahadur",
+    name: "Bahadur Ali",
     title: "Full Stack Developer",
   },
   {

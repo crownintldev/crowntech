@@ -64,8 +64,8 @@ export const Brandimg = [
   { id: "6", image:disney},
   { id: "7", image:apple},
   { id: "9", image:airbnb},
-
 ];
+
 
 export const FooterAbout = [
   { id: "1", title: "Mission & Vision", href: "/about" },
@@ -73,6 +73,8 @@ export const FooterAbout = [
   { id: "3", title: "Privacy Policy", href: "/policy" },
   { id: "4", title: "Support", href: "/support" },
 ];
+
+
 export const FooterResources = [
   { id: "1", title: "Project Management", href: "/" },
   { id: "2", title: "Solution", href: "/" },
@@ -80,12 +82,14 @@ export const FooterResources = [
   { id: "4", title: "Press & Media", href: "/" },
 ];
 
+
 export const WeOffer = [
   { id: "1", title: "Mission & Vision", href: "/" },
   { id: "2", title: "Our Team", href: "/" },
   { id: "3", title: "Career", href: "/" },
   { id: "4", title: "Press & Media", href: "/" },
 ];
+
 
 export const Offerdata = [
   {
@@ -107,7 +111,6 @@ export const Offerdata = [
     text: "Crown International Technology: Redefining the Digital Frontier Unlocking Digital Potential, Empowering Global Progress.",
   },
 ];
-
 
 
 export const Testimonialdata = [
@@ -144,6 +147,7 @@ export const Testimonialdata = [
     date: "29 Octobar 2023",
   },
 ];
+
 
 export const Blogdata = [
   {
@@ -312,8 +316,6 @@ export const Aboutcore = {
       ref: "/",
     },
 
-
-    // Add more objects here if needed
   ],
 };
 

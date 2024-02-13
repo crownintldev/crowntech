@@ -44,7 +44,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <div className={"carousel h-[100vh] lg:h-[70vh]"} ref={carouselRef}>
+    <div className={"carousel h-[90vh] lg:h-[70vh]"} ref={carouselRef}>
     <div className={"list"}>
         <div className={"item"}>
             <Image src={img1} alt="Image 1" layout="fill" objectFit="cover" />

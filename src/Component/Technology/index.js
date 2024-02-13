@@ -3,7 +3,6 @@ import React from 'react';
 import { HeadingH2, HeadingH5 } from '../Heading';
 import {  Para16 } from '../ParaGraph';
 import Image from 'next/image';
-import arrowDown from '../../../public/assets/images/arrowDown.png';
 import { TiTick } from 'react-icons/ti';
 import { Aboutcore } from '../Constants';
 import Container from '../Container';
@@ -20,14 +19,11 @@ const Technology = () => {
   return (
 <>
  <Container className={'bg-aboutfinger bg-no-repeat pt-20 pb-20 bg-left-bottom'}>
-        <div className='w-full flex gap-4'>
-          <Image src={arrowDown} alt='Arrow' className='h-20 animate-bounce delay-1000' />
           <div className='space-y-4 pb-10'>
             <HeadingH2 title='Technologies We Use' />
-            <HeadingH2 className={"text-primary-blue100 "} title=' Mostly' />
+            <HeadingH2 className={"text-primary-blue100 "}  title=' Mostly' />
           </div>
-        </div>
-
+      
         <div className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 gap-5">
   {Aboutcore && Aboutcore.service.map((array, index) => (
     <motion.div  key={index} className={`shadow-lg group mb-8 rounded-lg max-h-full h-auto flex justify-center items-center relative  bg-primary-blue400 hover:bg-primary-blue300 text-primary-black  dark:bg-primary-white`} style={{

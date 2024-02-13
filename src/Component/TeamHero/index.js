@@ -32,23 +32,19 @@ const TeamHero = () => {
         <div className='grid grid-cols-3 gap-5 '>
         <div className='space-y-5 relative'>
           <Image className='rounded-md' src={teamhero1} alt='teamhero1'/>
-          <Image className='absolute hidden md:block rounded-md animate-bounce  pt-8   right-5' src={arrowDown} alt='arrowDown'/>
         </div>
         <div className='space-y-5 '>
           <Image className='rounded-md ' src={teamhero2} alt='teamhero2'/>
           <div className='border-4 border-primary-gray300 h-auto  flex items-center justify-end'>
           <Image className='relative rounded-md bottom-3 left-3' src={teamhero3} alt='teamhero3'/>
           </div>
-          <div className='-rotate-90'>
-          <Image className='absolute hidden md:block animate-bounceRight rounded-md -bottom-8 right-28' src={arrowDown} alt='arrowDown'/>
-          </div>
+          
         </div>
         <div className='space-y-5'>
         <div className='border-4 border-primary-gray300 h-auto  flex items-center justify-end'>
           <Image src={aboutm1} alt='teamhero4' className='relative rounded-md top-3 right-2' />
         </div>
           <Image className='rounded-md' src={teamhero5} alt='aboutm1'/>
-          <Image className='rounded-md' src={teamhero6} alt='teamhero6'/>
         </div>
         </div>
         </div>

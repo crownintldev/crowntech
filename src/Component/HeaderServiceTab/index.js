@@ -52,13 +52,13 @@ const HeaderServiceTab = () => {
           <div key={index} onClick={() => handleServiceClick(service)}
             className="bg-primary-black  hover:bg-primary-light hover:scale-105 cursor-pointer flex items-center transition duration-300 gap-2 p-3 shadow-lg  rounded-md"
           >
-            {/* <Image
+            <Image
               className="w-[50px] h-[50px] rounded-[20px]"
               height={400}
               width={400}
               src={`/${service.serviceImage.replace("public/", "")}`}
               alt={`/${service.serviceImage.replace("public/", "")}`}
-            /> */}
+            />
             <div className="text-primary-black">
               <HeadingH6 title={service.serviceName} />
               <Para14 title={truncateText(service.serviceText, 60)} />

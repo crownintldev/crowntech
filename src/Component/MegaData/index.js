@@ -37,13 +37,13 @@
               <div>
 
               </div>
-              {/* <Image
+              <Image
                 className="w-[30px] h-[30px] object-cover bg-center rounded-full"
                 width={200}
                 height={200}
                 src={`/${service.serviceImage.replace("public/", "")}`}
                 alt={`/${service.serviceImage.replace("public/", "")}`}
-              /> */}
+              />
               <div>
                 <HeadingH6 className="hover:text-primary-black"  title={service.serviceName} />
                 <Para12 className="hover:text-primary-black"

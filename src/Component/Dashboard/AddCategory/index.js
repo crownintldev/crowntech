@@ -46,7 +46,7 @@ const AddCategory = () => {
         <Button
           type={"submit"}
           className={
-            `border-none w-full justify-center px-4 py-2 bg-gradient-to-r from-primary-btn1 hover:from-primary-btn3 via-primary-btn2 to-primary-btn3 hover:to-primary-btn1 text-primary-white transition duration-400 shadow-md ${loading ? 'opacity-50 cursor-not-allowed' : ''}` // Add conditional class
+            `border-none w-full justify-center px-4 py-2 bg-gradient-to-r from-primary-btn1 hover:from-primary-btn3 via-primary-btn2 to-primary-btn3 hover:to-primary-btn1 text-white transition duration-400 shadow-md ${loading ? 'opacity-50 cursor-not-allowed' : ''}` // Add conditional class
           }
           text={loading ? "Loading..." : "Submit"} // Change button text based on loading state
           disabled={loading} // Disable the button when loading

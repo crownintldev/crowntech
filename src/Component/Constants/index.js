@@ -53,8 +53,6 @@ export const slider =[
 
 ]
 
-
-
 export const Brandimg = [
   { id: "1", image:spark },
   { id: "2", image:sass },

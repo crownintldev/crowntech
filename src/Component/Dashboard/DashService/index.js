@@ -33,12 +33,12 @@ const DashService = () => {
     <Container className={""}>
       <div className="mt-10 justify-end flex flex-wrap md:flex-nowrap  gap-3">
         <Button
-          className="border-none rounded-md  justify-center px-4 py-2 bg-gradient-to-r from-primary-btn1 hover:from-primary-btn3 via-primary-btn2 to-primary-btn3 hover:to-primary-btn1 text-primary-white transition duration-400 shadow-md mr-2 ml-2"
+          className="border-none rounded-md  justify-center px-4 py-2 bg-gradient-to-r from-primary-btn1 hover:from-primary-btn3 via-primary-btn2 to-primary-btn3 hover:to-primary-btn1 text-white transition duration-400 shadow-md mr-2 ml-2"
           onClick={showDrawer1}
           text={"Add Category"}
         ></Button>
         <Button
-          className="border-none rounded-md  justify-center px-4 py-2 bg-gradient-to-r from-primary-btn1 hover:from-primary-btn3 via-primary-btn2 to-primary-btn3 hover:to-primary-btn1 text-primary-white transition duration-400 shadow-md mr-2 ml-2"
+          className="border-none rounded-md  justify-center px-4 py-2 bg-gradient-to-r from-primary-btn1 hover:from-primary-btn3 via-primary-btn2 to-primary-btn3 hover:to-primary-btn1 text-white transition duration-400 shadow-md mr-2 ml-2"
           onClick={showDrawer2}
           text={"Add Service"}
         ></Button>

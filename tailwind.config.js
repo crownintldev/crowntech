@@ -119,10 +119,6 @@ module.exports = {
         '16': '16px',
         '14': '14px',
         '12': '12px',
-
-
-
-
       },
       colors:{
         primary:{

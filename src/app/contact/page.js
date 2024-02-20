@@ -33,7 +33,7 @@ const Contact = () => {
         />
         <ContactInfo />
         <ContactForm />
-        <Newsletter />
+        {/* <Newsletter /> */}
         <Footer />
       </LayoutProvider>
     </>

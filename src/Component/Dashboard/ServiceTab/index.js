@@ -209,13 +209,13 @@ const ServiceTab = ({ nextStep, prevStep }) => {
       </div>
       <div className="flex gap-2">
         <Button
-          className="border-none w-full justify-center px-4 py-2 bg-gradient-to-r from-primary-btn1 hover:from-primary-btn3 via-primary-btn2 to-primary-btn3 hover:to-primary-btn1 text-primary-white transition duration-400 shadow-md"
+          className="border-none w-full justify-center px-4 py-2 bg-gradient-to-r from-primary-btn1 hover:from-primary-btn3 via-primary-btn2 to-primary-btn3 hover:to-primary-btn1 text-white transition duration-400 shadow-md"
           text="Back"
           onClick={prevStep}
         />
         <Button
           type="submit"
-          className="border-none w-full justify-center px-4 py-2 bg-gradient-to-r from-primary-btn1 hover:from-primary-btn3 via-primary-btn2 to-primary-btn3 hover:to-primary-btn1 text-primary-white transition duration-400 shadow-md"
+          className="border-none w-full justify-center px-4 py-2 bg-gradient-to-r from-primary-btn1 hover:from-primary-btn3 via-primary-btn2 to-primary-btn3 hover:to-primary-btn1 text-white transition duration-400 shadow-md"
           text={loading ? "Loading..." : "Next"}
         />
       </div>

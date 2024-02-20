@@ -6,6 +6,7 @@ import { IoServerOutline } from "react-icons/io5";
 import Switcher from '../Switcher';
 import icon from '../../../public/assets/images/dashicon.avif'
 import Image from 'next/image';
+import Logo from '../Logo';
 const DashboardProvider = ({ children}) => {
   const [activeLink, setActiveLink] = useState('/dashboard');
 
@@ -14,7 +15,7 @@ const DashboardProvider = ({ children}) => {
   <header className="sticky top-0 flex shadow flex-wrap sm:justify-start sm:flex-nowrap z-[48] w-full bg-primary-blue500 border-b text-sm py-2.5 sm:py-4 lg:ps-64 dark:bg-white ">
     <nav className="flex basis-full items-center w-full mx-auto px-4 sm:px-6 md:px-8" aria-label="Global">
       <div className="me-5 lg:me-0 lg:hidden">
-        <Link className="flex-none text-xl font-semibold text-white dark:text-black " href={'./dashboard'} aria-label="Brand">Brand</Link>
+        <Logo/>
       </div>
       <div className="w-full flex items-center justify-end ms-auto sm:justify-between sm:gap-x-3 sm:order-3">
         <div className="sm:hidden">
@@ -32,13 +33,12 @@ const DashboardProvider = ({ children}) => {
           </div>
         </div>
         <div className="flex flex-row items-center justify-end gap-2">
-          <button type="button" className="w-[2.375rem] h-[2.375rem] inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-full border border-transparent  text-white hover:text-black  hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:text-black dark:hover:text-white  dark:hover:bg-gray-700 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600">
+          <button type="button" className="w-[2.375rem] h-[2.375rem] inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-full border border-transparent  text-black hover:text-black  hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:text-black dark:hover:text-white  dark:hover:bg-gray-700 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600">
             <svg className="flex-shrink-0 w-4 h-4" xmlns="http://www.w3.org/2000/svg" width={24} height={24} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9" /><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0" /></svg>
           </button>
-          <button type="button" className="w-[2.375rem] h-[2.375rem] inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-full border border-transparent  text-white hover:text-black  hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:text-black dark:hover:text-white  dark:hover:bg-gray-700 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600" data-hs-offcanvas="#hs-offcanvas-right">
+          <button type="button" className="w-[2.375rem] h-[2.375rem] inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-full border border-transparent  text-black hover:text-black  hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:text-black dark:hover:text-white  dark:hover:bg-gray-700 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600" data-hs-offcanvas="#hs-offcanvas-right">
             <svg className="flex-shrink-0 w-4 h-4" xmlns="http://www.w3.org/2000/svg" width={24} height={24} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2" /></svg>
           </button>
-          <Switcher />
           <div className="hs-dropdown relative inline-flex [--placement:bottom-right]">
             <button id="hs-dropdown-with-header" type="button" className="w-[2.375rem] h-[2.375rem] inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-full border border-transparent  hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none  dark:hover:bg-gray-700 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600">
               <Image className="inline-block h-[2.375rem] w-[2.375rem] rounded-full ring-2 ring-white dark:ring-gray-800" src={icon} alt="Image Description" />
@@ -67,18 +67,18 @@ const DashboardProvider = ({ children}) => {
       {/* Navigation Toggle */}
       <button type="button" className="" data-hs-overlay="#application-sidebar" aria-controls="application-sidebar" aria-label="Toggle navigation">
         <span className="sr-only">Toggle Navigation</span>
-        <svg className="flex-shrink-0 w-4 h-4 text-white dark:text-black" xmlns="http://www.w3.org/2000/svg" width={24} height={24} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round"><line x1={3} x2={21} y1={6} y2={6} /><line x1={3} x2={21} y1={12} y2={12} /><line x1={3} x2={21} y1={18} y2={18} /></svg>
+        <svg className="flex-shrink-0 w-4 h-4 text-black dark:text-black" xmlns="http://www.w3.org/2000/svg" width={24} height={24} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round"><line x1={3} x2={21} y1={6} y2={6} /><line x1={3} x2={21} y1={12} y2={12} /><line x1={3} x2={21} y1={18} y2={18} /></svg>
       </button>
       {/* End Navigation Toggle */}
       {/* Breadcrumb */}
       <ol className="ms-3 flex items-center whitespace-nowrap" aria-label="Breadcrumb">
-        <li className="flex items-center text-sm text-white dark:text-black">
+        <li className="flex items-center text-sm text-black dark:text-black">
           Dashboard
           <svg className="flex-shrink-0 mx-3 overflow-visible h-2.5 w-2.5 text-gray-400 dark:text-gray-600" width={16} height={16} viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M5 1L10.6869 7.16086C10.8637 7.35239 10.8637 7.64761 10.6869 7.83914L5 14" stroke="currentColor" strokeWidth={2} strokeLinecap="round" />
           </svg>
         </li>
-        <li className="text-sm font-semibold text-white truncate dark:text-black" aria-current="page">
+        <li className="text-sm font-semibold text-black truncate " aria-current="page">
           Service
         </li>
       </ol>
@@ -88,20 +88,20 @@ const DashboardProvider = ({ children}) => {
   {/* End Sidebar Toggle */}
 
   {/* Sidebar */}
-  <div id="application-sidebar" className="hs-overlay hs-overlay-open:translate-x-0 -translate-x-full transition-all duration-300 transform hidden fixed top-0 start-0 bottom-0 z-[60] w-64 bg-primary-blue500 border-e border-primary-blue500 pt-7 pb-10 overflow-y-auto lg:block lg:translate-x-0 lg:end-auto lg:bottom-0 [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-track]:bg-gray-100 [&::-webkit-scrollbar-thumb]:bg-gray-300 dark:[&::-webkit-scrollbar-track]:bg-slate-700 dark:[&::-webkit-scrollbar-thumb]:bg-slate-500 dark:bg-white  dark:border-white dark:shadow">
+  <div id="application-sidebar" className="hs-overlay hs-overlay-open:translate-x-0 -translate-x-full transition-all duration-300 transform hidden fixed top-0 start-0 bottom-0 z-[60] w-64 bg-primary-blue500 border-e border-primary-blue500 pt-7 pb-10 overflow-y-auto lg:block lg:translate-x-0 lg:end-auto lg:bottom-0 [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-track]:bg-gray-100 [&::-webkit-scrollbar-thumb]:bg-gray-300 dark:[&::-webkit-scrollbar-track]:bg-slate-700 dark:[&::-webkit-scrollbar-thumb]:bg-slate-500 dark:bg-white  dark:border-black dark:shadow">
     <div className="px-6">
-      <Link className="flex-none text-xl font-semibold text-white dark:text-black  dark:focus:outline-none dark:focus:ring-1" href="./" aria-label="Brand">Brand</Link>
+    <Logo/>
     </div>
     <nav className="hs-accordion-group p-6 w-full flex flex-col flex-wrap" >
       <ul className="space-y-1.5">
         
-          <Link className={`w-full flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-white rounded-lg hover:bg-primary-blue100 dark:hover:bg-primary-blue100 dark:text-black dark:hover:text-white dark:focus:outline-none dark:focus:ring-1
+          <Link className={`w-full flex items-center gap-x-3.5 py-2 px-2.5 text-sm  rounded-lg hover:bg-primary-blue100 dark:hover:bg-primary-blue100 text-black dark:hover:text-white dark:focus:outline-none dark:focus:ring-1
          dark:focus:ring-primary-blue100 ${activeLink === '/dashboard' ? 'bg-primary-blue100 text-white dark:text-white' : ''}`} href="/dashboard"  >
             <GrHomeRounded className="flex-shrink-0 w-4 h-4"/>
             Dashboard
           </Link>
-        <Link className={`w-full flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-white rounded-lg hover:bg-primary-blue100 dark:hover:bg-primary-blue100 dark:text-black dark:hover:text-white dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-primary-blue100 ${
-                activeLink === '/dashboard/service' ? 'bg-primary-blue100 text-white dark:text-white' : ''
+        <Link className={`w-full flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-black rounded-lg hover:bg-primary-blue100 dark:hover:bg-primary-blue100 dark:hover:text-white dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-primary-blue100 ${
+                activeLink === '/dashboard/service' ? 'bg-primary-blue100 text-white' : ''
               }`}href="/dashboard/service">
         <IoServerOutline  className="flex-shrink-0 w-4 h-4" />
             Service

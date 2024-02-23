@@ -28,7 +28,7 @@
           <div className="flex items-center p-3 ">
             <HeadingH4 title={"Core Services"} />
           </div>
-          {services.map((service, index) => (
+          {services && services.map((service, index) => (
             <div
               key={index}
               onClick={() => handleServiceClick(service)}

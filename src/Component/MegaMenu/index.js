@@ -86,7 +86,7 @@ const MegaMenu = ({
           </div>
           <div className="flex gap-1 " style={{width:"100%" , maxHeight:"calc(100vh - 65px)" }}>
             <div className={` ${className}  p-1 overflow-y-scroll lg:max-h-[330px] xl:max-h-[420px] xxl:xl:max-h-max pt-5 w-5/12 md:w-3/12  `}>
-              {servicecat && servicecat.map((category, index) => (
+              {servicecat.length > 0 && servicecat.map((category, index) => (
                 <div
                   key={index}
                   onClick={() => handleTabClick(category.id)}

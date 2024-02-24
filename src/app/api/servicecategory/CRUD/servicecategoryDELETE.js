@@ -10,7 +10,7 @@ export const servicecategoryDELETE = async (req, { params }) => {
     // Check if there are associated Serviceinfo records
     const serviceinfos = await prisma.serviceinfo.findMany({
       where: {
-        categoryId: parseInt(id, 10),
+        categoryId: id,
       },
     });
 
@@ -18,7 +18,7 @@ export const servicecategoryDELETE = async (req, { params }) => {
       // Delete associated Serviceinfo records first
       await prisma.serviceinfo.deleteMany({
         where: {
-          categoryId: parseInt(id, 10),
+          categoryId: id,
         },
       });
     }
@@ -26,7 +26,7 @@ export const servicecategoryDELETE = async (req, { params }) => {
     // Now you can safely delete the Servicecategory
     const servicecategory = await prisma.servicecategory.delete({
       where: {
-        id: parseInt(id, 10),
+        id: id,
       },
     });
 

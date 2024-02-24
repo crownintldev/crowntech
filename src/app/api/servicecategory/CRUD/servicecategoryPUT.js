@@ -5,13 +5,13 @@ const prisma = new PrismaClient();
 
 export const servicecategoryPUT = async (req, { params }) => {
     try {
-        const id = parseInt(params.id, 10);
+        const id = id;
         const body = await req.json();
         const { catName } = body; // Remove the 's' here
 
         const servicecategory = await prisma.servicecategory.update({
             where: {
-                id: parseInt(id, 10),
+                id: id,
             },
             data: {
                 catName,

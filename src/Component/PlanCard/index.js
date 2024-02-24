@@ -57,34 +57,22 @@ const PlanCard = ({ serviceTabId, setServiceplanId }) => {
             {filteredServiceplan &&
               filteredServiceplan.map((items, index) => (
                 <div
-                  className={`  space-y-2 shadow  mb-5 rounded-lg p-4 hover:scale-105 transition duration-300 bg-primary-blue100  dark:bg-primary-black `}
+                  className={`  space-y-2 shadow  mb-5 rounded-lg text-white p-4 hover:scale-105 transition duration-300 bg-primary-blue100  dark:bg-primary-black `}
                   key={index}
                 >
-                  <div className="">
-                    <HeadingH3
-                      
-                      title={items.title}
-                    />
-                    <p className="font-normal">{items.text}</p>
-                  </div>
-                  <div>
-                    <HeadingH4
-                      
-                      title={items.price}
-                      spans={"$"}
-                    />
-
-                    <p className="font-normal">{items.description}</p>
-                  </div>
-                  <div>
+                
+                    <HeadingH3 className="text-white" title={items.title}   />
+                    <Para12 className="font-normal" title={items.text}/>
+                    <HeadingH4 className="text-white" title={items.price} spans={"$"}/>
+                    <Para12 className="font-normal" title={items.description} />
                     <hr />
-                  </div>
+                 
                   <Button
                     text={"Choose Plan"}
                     className={`w-full  justify-center flex bg-primary-black text-black  dark:bg-primary-blue200 dark:hover:bg-primary-blue300 dark:text-white border-none `}
                   />
                   <HeadingH4
-                    
+                    className="text-white"
                     title={"Features"}
                   />
 
@@ -92,15 +80,12 @@ const PlanCard = ({ serviceTabId, setServiceplanId }) => {
                     <>
                       <div className="flex" key={index}>
                         <TiTick size={20} />
-                        <Para14
-                          
-                          title={items.option}
-                        />
+                        <Para14 className="text-white" title={items.option}/>
                       </div>
                     </>
                   ))}
                   <Para12
-                    
+                    className="text-white"
                     title={
                       "This is project starting Price it will be increase on project scalability."
                     }

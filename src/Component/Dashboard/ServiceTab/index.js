@@ -95,19 +95,18 @@ const ServiceTab = ({ nextStep, prevStep }) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    let receivedId = null; // Declare receivedId at a higher scope
+    let receivedId = null;
     setLoading(true);
     try {
-      const serviceInfoIdParsed = parseInt(id, 10);
-      if (isNaN(serviceInfoIdParsed)) {
-        console.error("Service info ID is undefined or not a valid integer.");
+      if (typeof id !== 'string' || id.length !== 24) {
+        console.error("Service info ID is undefined or not a valid MongoDB ObjectID.");
         alert("Error: Invalid Service Info ID.");
         return;
       }
   
       const requestData = tabsData.map(tab => ({
         ...tab,
-        serviceInfoId: serviceInfoIdParsed
+        serviceInfoId: id
       }));
   
       console.log("Prepared Request Data:", requestData);
@@ -116,18 +115,18 @@ const ServiceTab = ({ nextStep, prevStep }) => {
       console.log("Response Data:", response.data);
   
       if (response.data.responses && response.data.responses.length > 0) {
-        receivedId = response.data.responses[0].id; // Assign value to receivedId
+        receivedId = response.data.responses[0].id;
         console.log("Received ID:", receivedId);
       } else {
         console.log("No responses found in the data.");
       }
   
-      setid(receivedId); // Use receivedId here
-      nextStep(receivedId); // And here
+      setid(receivedId);
+      nextStep(receivedId);
     } catch (error) {
       console.error("Error submitting the form:", error);
       alert("Error submitting the data. Check the console for more details.");
-    }finally {
+    } finally {
       setLoading(false);
     }
   };

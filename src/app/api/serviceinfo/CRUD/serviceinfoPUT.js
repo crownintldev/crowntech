@@ -6,13 +6,13 @@ const prisma = new PrismaClient();
 
 export const serviceinfoPUT = async (req,{params}) => {
     try {
-        const id = parseInt(params.id, 10);
+        const id = id;
         const body = await req.json();
         const {serviceImage, serviceName, serviceText, categoryId } = body;
         // Update the existing serviceinfo
         const serviceinfo = await prisma.serviceinfo.update({
             where: {
-                id: parseInt(id, 10),
+                id: id,
             },
             data: {
                 serviceImage,

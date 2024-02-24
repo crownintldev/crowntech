@@ -16,6 +16,7 @@ const ServiceInfo = ({ nextStep, prevStep }) => {
   });
   const [file, setFile] = useState();
   const [loading, setLoading] = useState(false);
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setServiceData(prev => ({ ...prev, [name]: value }));
@@ -29,17 +30,14 @@ const ServiceInfo = ({ nextStep, prevStep }) => {
       console.error("No file selected");
       return;
     }
-    const categoryId = parseInt(id, 10);
+  
+    const categoryId = id;  // Use id as a string
     const formData = new FormData();
     formData.append('file', file);
     formData.append('serviceName', serviceData.serviceName);
     formData.append('serviceText', serviceData.serviceText);
-    formData.append('categoryId', categoryId);
+    formData.append('categoryId', categoryId);  // Append as a string
   
-    if (isNaN(categoryId)) {
-      console.error("Invalid category ID");
-      return;
-    }
     setLoading(true);
     try {
       const response = await axios.post("/api/serviceinfo", formData, {
@@ -53,10 +51,11 @@ const ServiceInfo = ({ nextStep, prevStep }) => {
       nextStep(newId);
     } catch (error) {
       console.error("Submission error:", error);
-    } finally{
+    } finally {
       setLoading(false);
     }
   };
+  
   
 
   return (
@@ -86,7 +85,7 @@ const ServiceInfo = ({ nextStep, prevStep }) => {
         <Button
           onClick={prevStep}
           className={
-            "border-none w-full justify-center px-4 py-2 bg-gradient-to-r from-primary-btn1 hover:from-primary-btn3 via-primary-btn2 to-primary-btn3 hover:to-primary-btn1 text-primary-white transition duration-400 shadow-md"
+            "border-none w-full justify-center px-4 py-2 bg-gradient-to-r from-primary-btn1 hover:from-primary-btn3 via-primary-btn2 to-primary-btn3 hover:to-primary-btn1 text-white transition duration-400 shadow-md"
           }
           text={"Back"}
         />

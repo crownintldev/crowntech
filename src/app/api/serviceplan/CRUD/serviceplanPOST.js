@@ -8,7 +8,6 @@ export const serviceplanPOST = async (req) => {
         const bodyArray = await req.json();
         console.log('Received request body:', bodyArray);
 
-        // Check if bodyArray is actually an array
         if (!Array.isArray(bodyArray)) {
             throw new Error("Request body must be an array of objects");
         }
@@ -16,9 +15,12 @@ export const serviceplanPOST = async (req) => {
         const responses = await Promise.all(bodyArray.map(async (body) => {
             const { title, text, price, chooseplan, description, feature, tabId } = body;
 
-            // Process the feature array, assuming each feature object contains necessary fields
-            const processedFeatures = feature.map(f => ({ ...f }));
+            // Validate tabId format
+            if (typeof tabId !== 'string' || tabId.length !== 24) {
+                throw new Error("Invalid tabId format. It must be a 24-character hexadecimal string.");
+            }
 
+            // Create service plan
             return prisma.serviceplan.create({
                 data: {
                     title,
@@ -27,20 +29,19 @@ export const serviceplanPOST = async (req) => {
                     chooseplan,
                     description,
                     feature: {
-                        create: processedFeatures
+                        create: feature.map(f => ({ ...f }))
                     },
                     tab: {
                         connect: { id: tabId }
                     },
                 },
                 include: {
-                    feature: true,
-                    tab: true
+                    feature: true, // Include features in the response
+                    tab: true // Include tab in the response
                 }
             });
         }));
 
-        // Return a success response with all created serviceplans
         return new NextResponse(
             JSON.stringify({ success: "Serviceplans saved successfully", responses }),
             { status: 201 }

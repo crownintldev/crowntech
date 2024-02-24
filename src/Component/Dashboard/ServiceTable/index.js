@@ -62,19 +62,17 @@ const ServiceTable = () => {
   const startIndex = (currentPage - 1) * entriesPerPage;
   const endIndex = startIndex + entriesPerPage;
 
-  const filteredServiceinfo =
-    filterOption === "All"
-      ? serviceinfo
-      : serviceinfo.filter((service) =>
-          service.category.catName === filterOption
-        );
+  const filteredServiceinfo = serviceinfo && filterOption === "All"
+  ? serviceinfo
+  : serviceinfo?.filter(service =>
+      service.category.catName === filterOption
+    ) || [];
 
-  // Filter serviceinfo based on search text
-  const filteredServiceinfoBySearch = filteredServiceinfo.filter(
-    (service) =>
-      service.serviceName.toLowerCase().includes(searchText.toLowerCase()) ||
-      service.category.catName.toLowerCase().includes(searchText.toLowerCase())
-  );
+// Further down in your code, when filtering based on search text:
+const filteredServiceinfoBySearch = filteredServiceinfo?.filter(service =>
+  service.serviceName.toLowerCase().includes(searchText.toLowerCase()) ||
+  service.category.catName.toLowerCase().includes(searchText.toLowerCase())
+) || [];
 
   const serviceinfoSlice = filteredServiceinfoBySearch.slice(startIndex, endIndex);
 
@@ -94,6 +92,7 @@ const ServiceTable = () => {
     setSearchText(event.target.value);
     setCurrentPage(1);
   };
+  const isServiceInfoLoaded = Array.isArray(serviceinfo);
 
   return (
     <div className="container mx-auto px-4 sm:px-8">
@@ -197,7 +196,7 @@ const ServiceTable = () => {
                 </tr>
               </thead>
               <tbody>
-                {serviceinfoSlice.map((servicein, index) => (
+                {serviceinfoSlice && serviceinfoSlice.map((servicein, index) => (
                   <tr key={index}>
                     <>
                       <td className="px-5 py-5 bg-white text-sm" >
@@ -270,11 +269,10 @@ const ServiceTable = () => {
         </div>
 
             <div className="px-5 py-5 bg-white border-t flex flex-col xs:flex-row items-center xs:justify-between">
-              <span className="text-xs xs:text-sm text-gray-900">
-                Showing {startIndex + 1} to{" "}
-                {Math.min(endIndex, serviceinfo.length)} of {serviceinfo.length}{" "}
-                Entries
-              </span>
+            <span className="text-xs xs:text-sm text-gray-900">
+  Showing {startIndex + 1} to{" "}
+  {isServiceInfoLoaded ? Math.min(endIndex, serviceinfo.length) : 0} of {isServiceInfoLoaded ? serviceinfo.length : 0} Entries
+</span>
               <div className="inline-flex mt-2 xs:mt-0">
                 <button
                   className="text-sm bg-gray-300 hover:bg-gray-400 text-gray-800 font-semibold py-2 px-4 rounded-l"
@@ -296,8 +294,7 @@ const ServiceTable = () => {
                     )
                   }
                   disabled={
-                    currentPage ===
-                    Math.ceil(serviceinfo.length / entriesPerPage)
+                    currentPage === Math.ceil((Array.isArray(serviceinfo) ? serviceinfo.length : 0) / entriesPerPage)
                   }
                 >
                   Next

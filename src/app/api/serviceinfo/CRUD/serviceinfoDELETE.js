@@ -8,7 +8,7 @@ export const serviceinfoDELETE = async (req, { params }) => {
     const id = params.id;
     const serviceinfo = await prisma.serviceinfo.delete({
       where: {
-        id: parseInt(id, 10),
+        id: id,
       },
     });
 

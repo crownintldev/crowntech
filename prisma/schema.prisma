@@ -29,65 +29,76 @@ model Contact {
   Comment       String
   createdAt     DateTime  @default(now())
 }
-
-// Servicecategory model
 model Servicecategory {
-  id          String     @id @default(auto()) @map("_id") @db.ObjectId
-  catName     String
-  createdAt   DateTime   @default(now())
+  id           String        @id @default(auto()) @map("_id") @db.ObjectId
+  catName      String
+  serviceInfos Serviceinfo[] // One-to-many relationship with Serviceinfo
+  createdAt    DateTime      @default(now())
+
 }
 
-// Serviceinfo model
 model Serviceinfo {
-  id            String    @id @default(auto()) @map("_id") @db.ObjectId
-  serviceImage  String?
-  serviceName   String
-  serviceText   String
-  createdAt     DateTime  @default(now())
-  categoryId    String
+  id           String       @id @default(auto()) @map("_id") @db.ObjectId
+  serviceImage String?
+  serviceName  String
+  serviceText  String
+  categoryId   String       @db.ObjectId
+  category     Servicecategory @relation(fields: [categoryId], references: [id]) // Many-to-one relationship with Servicecategory
+  servicetabs  Servicetab[] // One-to-many relationship with Servicetab
+  createdAt    DateTime     @default(now())
+
 }
 
-// Servicetab model
 model Servicetab {
-  id             String             @id @default(auto()) @map("_id") @db.ObjectId
-  title          String?
-  heading        String?
-  description    String?
-  subdata        ServiceSubItem[]
-  createdAt      DateTime           @default(now())
+  id            String            @id @default(auto()) @map("_id") @db.ObjectId
+  title         String?
+  heading       String?
+  description   String?
+  serviceInfoId String?           @db.ObjectId
+  serviceInfos  Serviceinfo?      @relation(fields: [serviceInfoId], references: [id]) // Many-to-one relationship with Serviceinfo
+  subdata       ServiceSubItem[]  // One-to-many relationship with ServiceSubItem
+  serviceplans  Serviceplan[]     // One-to-many relationship with Serviceplan
+  createdAt     DateTime          @default(now())
+
 }
 
-// ServiceSubItem model
 model ServiceSubItem {
-  id               String       @id @default(auto()) @map("_id") @db.ObjectId
-  link             String?
-  description      String?
-  servicetabId     String?      @db.ObjectId
-  servicetab       Servicetab?  @relation(fields: [servicetabId], references: [id])
+  id           String      @id @default(auto()) @map("_id") @db.ObjectId
+  link         String?
+  description  String?
+  mainItemId String?     @db.ObjectId
+  mainItem   Servicetab? @relation(fields: [mainItemId], references: [id]) // Many-to-one relationship with Servicetab
 }
 
-// Serviceplan model
 model Serviceplan {
-  id              String    @id @default(auto()) @map("_id") @db.ObjectId
-  title           String
-  text            String?
-  price           String
-  chooseplan      String?
-  description     String?
-  createdAt       DateTime  @default(now())
+  id            String           @id @default(auto()) @map("_id") @db.ObjectId
+  title         String
+  text          String?
+  price         String
+  chooseplan    String?
+  description   String?
+  tabId         String           @db.ObjectId
+  tab           Servicetab       @relation(fields: [tabId], references: [id]) // Many-to-one relationship with Servicetab
+  servicefaqs   Servicefaq[]     // One-to-many relationship with Servicefaq
+  feature      Servicefeature[] // One-to-many relationship with Servicefeature
+  createdAt     DateTime         @default(now())
+
 }
 
-// Servicefeature model
 model Servicefeature {
-  id              String    @id @default(auto()) @map("_id") @db.ObjectId
-  option          String
+  id          String      @id @default(auto()) @map("_id") @db.ObjectId
+  option      String
+  mainItemId      String      @db.ObjectId
+  mainItem        Serviceplan @relation(fields: [mainItemId], references: [id]) // Many-to-one relationship with Serviceplan
 }
 
-// Servicefaq model
 model Servicefaq {
-  id              String    @id @default(auto()) @map("_id") @db.ObjectId
-  Faqimage        String?
-  heading         String?
-  description     String?
-  planId          String?
+  id            String      @id @default(auto()) @map("_id") @db.ObjectId
+  Faqimage      String?
+  heading       String?
+  description   String?
+  planId        String?     @db.ObjectId
+  plan          Serviceplan? @relation(fields: [planId], references: [id]) // Many-to-one relationship with Serviceplan
+  createdAt     DateTime    @default(now())
+
 }

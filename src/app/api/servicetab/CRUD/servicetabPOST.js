@@ -8,7 +8,6 @@ export const servicetabPOST = async (req) => {
     const bodyArray = await req.json();
     console.log('Received request body:', bodyArray);
 
-    // Check if bodyArray is actually an array
     if (!Array.isArray(bodyArray)) {
       throw new Error("Request body must be an array of objects");
     }
@@ -16,8 +15,12 @@ export const servicetabPOST = async (req) => {
     const responses = await Promise.all(bodyArray.map(async (body) => {
       const { title, heading, description, subdata, serviceInfoId } = body;
 
-      // Your existing logic to handle subdata
-      let ServiceSubItem = subdata.map(subItem => ({
+      // Assuming serviceInfoId should be a valid MongoDB ObjectID
+      if (typeof serviceInfoId !== 'string' || serviceInfoId.length !== 24) {
+        throw new Error("Invalid serviceInfoId format. It must be a 24-character hexadecimal string.");
+      }
+
+      const ServiceSubItem = subdata.map(subItem => ({
         link: subItem.link,
         description: subItem.description
       }));
@@ -40,7 +43,6 @@ export const servicetabPOST = async (req) => {
     );
   } catch (error) {
     console.error(error);
-    // Correct error response using NextResponse
     return new NextResponse(
       JSON.stringify({ error: error.message }),
       { status: 400 }

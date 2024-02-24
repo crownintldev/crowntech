@@ -22,6 +22,7 @@ const ShowCategory = ({ nextStep, categoryDataProp }) => {
       const response = await axios.get("/api/servicecategory");
       setCategoryData(response.data.servicecategories);
       console.log("Api Category Res", response.data.servicecategories);
+      
     } catch (error) {
       console.error("There was an error fetching the data:", error);
     }

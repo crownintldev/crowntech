@@ -14,8 +14,8 @@ async function processFormData(formData) {
       let [index, property] = [parseInt(match[1]), match[2]];
       faqs[index] = faqs[index] || {};
       if (property === 'planId') {
-        // Convert planId to integer or set to null if invalid
-        faqs[index][property] = parseInt(value, 10) || null;
+        // Convert planId to string
+        faqs[index][property] = String(value);
       } else {
         faqs[index][property] = value instanceof File ? value : value;
       }
@@ -26,7 +26,7 @@ async function processFormData(formData) {
 
 // Helper function to handle file upload and validation
 async function handleFileUpload(file) {
-  if (file.size > 10000000) {
+  if (file.size > 10000000) { // Check file size (less than 10MB)
     throw new Error("Image should be less than 10MB in size");
   }
 
@@ -40,18 +40,12 @@ async function handleFileUpload(file) {
   return relativeImagePath;
 }
 
-// Helper function to save data to the database
-async function saveToDatabase(data) {
-  return await prisma.servicefaq.create({ data });
-}
-
-// Main function
+// Main function for handling the POST request
 export const servicefaqPOST = async (req) => {
   try {
     let formData = await req.formData();
     let faqs = await processFormData(formData);
 
-    // Assuming your Prisma schema expects an array of faq entries
     const createdFaqs = await Promise.all(faqs.map(async faq => {
       if (faq.Faqimage instanceof File) {
         faq.Faqimage = await handleFileUpload(faq.Faqimage);
@@ -62,15 +56,15 @@ export const servicefaqPOST = async (req) => {
           Faqimage: faq.Faqimage || '',
           heading: faq.heading || '',
           description: faq.description || '',
-          planId: faq.planId // This is now an integer or null
+          planId: faq.planId
         }
       });
     }));
 
-    console.log(createdFaqs);
+    console.log('Created FAQs:', createdFaqs);
     return NextResponse.json({ success: true, data: createdFaqs }, { status: 200 });
   } catch (err) {
-    console.error(err.message);
+    console.error('Error in servicefaqPOST:', err);
     return NextResponse.json({ success: false, error: err.message }, { status: 500 });
   }
 };
